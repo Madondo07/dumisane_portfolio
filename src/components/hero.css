@@ -1,0 +1,101 @@
+/* Hero component styles */
+.hero-outer {
+  width: 100%;
+  /* page-level spacing; keep top padding to clear the fixed navbar */
+  padding-top: 10rem; /* space to avoid navbar overlap */
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem; /* equal spacing to next section */
+  box-sizing: border-box;
+  scroll-margin-top: 96px; /* anchor offset with fixed navbar */
+}
+
+.hero-frame {
+  max-width: calc(1100px + 30px);
+  margin: 0 auto;
+  /* outer frame acts as the border: sharp corners, visible gradient */
+  background: linear-gradient(90deg, var(--hero-end), var(--hero-start));
+  padding: 15px; /* visible border thickness */
+  border-radius: 0; /* sharp outer corners */
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: linear-gradient(90deg, var(--hero-start), var(--hero-end));
+  padding: 1.25rem;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+.hero-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-width: 280px;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-content { color: var(--text); }
+.hero-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+}
+.hero-sub {
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+.hero-ctas {
+  display:flex;
+  gap: 1rem;
+}
+.btn {
+  display:inline-block;
+  background: rgba(0,0,0,0.08);
+  color: var(--text);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Make hero responsive */
+@media (max-width: 880px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-media { order: -1; }
+}
+
+/* On very small screens reduce the top offset so it doesn't add too much vertical space */
+@media (max-width: 480px) {
+  .hero-outer { padding-top: 4rem; }
+}
+
+/* Dark theme tweaks: ensure gradient uses dark variables */
+html.dark .hero-inner {
+  background: linear-gradient(135deg,var(--hero-start),var(--hero-end));
+}
+.hero-outer .reveal { opacity: 0; transform: translateY(16px); }
+.hero-visible .reveal { opacity: 1; transform: none; transition: opacity 420ms ease, transform 420ms ease; }
+.role-rotator { display: inline-block; color: var(--accent); font-weight: 700; margin: 0 0.25rem; }
+.role-item { display: inline-block; animation: roleIn 480ms ease; transition: color 240ms ease; }
+.accent-frontend { color: #22c55e; }
+.accent-backend { color: #f59e0b; }
+.accent-db { color: #3b82f6; }
+@keyframes roleIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.role-heading { margin: 0.25rem 0 0.5rem; font-size: 1.6rem; color: var(--accent); }
+.role-item::after { content: "|"; margin-left: 2px; opacity: 0.6; animation: blink 1s step-end infinite; }
+@keyframes blink { 50% { opacity: 0; } }

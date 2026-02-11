@@ -1,0 +1,144 @@
+/* Footer styles - full width, theme-aware using CSS variables (no gradients) */
+.site-footer {
+  width: 100%;
+  background-color: var(--surface);
+  color: var(--text);
+  /* removed border and box-shadow so content can expand fully (only 10px side padding applied) */
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-heading { 
+  margin: 0;
+  font-size: 1.8rem; 
+  color: var(--text); 
+  text-align: center;
+}
+
+.footer-col h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-nav li {
+  margin: 0.45rem 0;
+}
+.footer-nav a {
+  color: var(--text);
+  opacity: 0.95;
+  text-decoration: none;
+}
+.footer-nav a:hover { color: var(--accent); text-decoration: none; }
+
+.footer-contact .contact-line {
+  margin: 0.25rem 0;
+  opacity: 0.95;
+}
+.socials {
+  margin-top: 0.75rem;
+  display:flex;
+  gap: 0.8rem;
+}
+.footer-contacts .socials { margin-top: 0; }
+.social-link {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  height:auto;
+  border-radius:8px;
+  background: transparent;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 120ms ease, color 180ms ease;
+  padding: 6px;
+}
+.social-svg { display:block; width:26px; height:26px; fill: currentColor; }
+.social-link:hover {
+  transform: translateY(-3px);
+  color: var(--accent);
+}
+
+.footer-brand { text-align: center; }
+.footer-logo { width:40px; height:auto; display:inline-block; filter: none; }
+.footer-tagline { margin: 0; font-size: 0.98rem; opacity: 0.95; color: var(--text); }
+.copyright { margin-top:0.8rem; opacity:0.85; }
+
+.footer-contacts {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.footer-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.08);
+}
+.contact-icon { width: 20px; height: 20px; stroke: currentColor; fill: none; }
+.footer-sep {
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background: var(--text);
+  opacity: 0.25;
+  margin: 0 0.4rem;
+  border-radius: 1px;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.35;
+  margin: 1rem auto 0.75rem;
+  border-radius: 2px;
+}
+
+.footer-copy {
+  text-align: center;
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+}
+
+/* Make footer responsive */
+@media (max-width: 880px) {
+  .footer-inner { padding: 1rem 16px; }
+  .footer-logo { width:36px; }
+  .footer-tagline, .copyright { font-size: 0.9rem; }
+}
+
+/* Dark theme tweaks - relies on --surface and --text variables defined in index.css */
+/* Slightly stronger contrast for social link backgrounds in dark mode */
+html.dark .social-link:hover {
+  background-color: rgba(255,255,255,0.04);
+}

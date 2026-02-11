@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Dumisane.dev icon">
+  <rect width="64" height="64" rx="12" fill="var(--nav-bg)" />
+  <g transform="translate(12,12)">
+    <circle cx="20" cy="20" r="12" fill="var(--accent)" />
+    <path d="M8 24c6-6 16-6 22 0" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" />
+  </g>
+</svg>

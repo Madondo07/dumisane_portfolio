@@ -1,0 +1,85 @@
+.skills-section {
+  padding: 2rem;
+  background: var(--bg);
+  margin-bottom: 3rem; /* equal spacing to next section */
+  scroll-margin-top: 96px; /* account for fixed navbar on anchors */
+}
+
+.skills-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.skills-header h2 {
+  font-size: 2rem;
+  color: var(--accent);
+}
+.skills-heading { display:flex; align-items:center; gap:0.5rem; }
+.skills-heading-icon { stroke: #22c55e; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skill-item {
+  flex: 0 0 auto;
+  width: 280px;
+  background: linear-gradient(90deg, var(--hero-end), var(--hero-start));
+  padding: 15px;
+  border-radius: 16px;
+}
+
+.skill-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, var(--hero-start), var(--hero-end));
+  padding: 1.25rem;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  min-height: 260px;
+}
+
+.skill-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+  font-size: 1.25rem;
+}
+
+.skill-divider {
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.9;
+  margin: 0 0 0.75rem 0;
+  border-radius: 2px;
+}
+
+.skill-list { display:none; }
+
+.skill-li { display:none; }
+
+.skills-sentence {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.75);
+  letter-spacing: 0.02em;
+}
+html.dark .skills-sentence { color: rgba(255,255,255,0.85); }
+
+@media (max-width: 768px) {
+  .skill-item { width: 240px; }
+  .skill-inner { min-height: 240px; }
+}
+
+@media (max-width: 480px) {
+  .skill-item { width: 100%; max-width: 360px; }
+}
+.skills-section .reveal { opacity: 0; transform: translateY(16px); }
+.skills-visible .reveal { opacity: 1; transform: none; transition: opacity 420ms ease, transform 420ms ease; }
