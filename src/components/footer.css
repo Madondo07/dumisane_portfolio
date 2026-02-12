@@ -3,7 +3,8 @@
   width: 100%;
   background-color: var(--surface);
   color: var(--text);
-  /* removed border and box-shadow so content can expand fully (only 10px side padding applied) */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .footer-inner {
@@ -83,6 +84,13 @@
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .footer-inner { padding: 1.25rem 12px; }
+  .footer-heading { font-size: 1.6rem; }
 }
 .footer-contact {
   display: inline-flex;

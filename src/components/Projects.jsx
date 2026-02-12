@@ -92,6 +92,28 @@ function Projects() {
     return () => obs.disconnect();
   }, []);
 
+  useEffect(() => {
+    const frame = sectionRef.current;
+    const container = carouselRef.current;
+    if (!frame || !container) return;
+    const calc = () => {
+      const inners = container.querySelectorAll('.project-inner');
+      let max = 0;
+      inners.forEach((n) => { max = Math.max(max, n.offsetHeight || 0); });
+      const extra = 56; // leave space for actions
+      frame.style.setProperty('--card-h', `${max + extra}px`);
+    };
+    calc();
+    const ro = new ResizeObserver(calc);
+    const inners = container.querySelectorAll('.project-inner');
+    inners.forEach((n) => ro.observe(n));
+    window.addEventListener('resize', calc);
+    return () => {
+      window.removeEventListener('resize', calc);
+      ro.disconnect();
+    };
+  }, [projects.length, visible]);
+
   return (
     <section className={`projects-section ${visible ? "projects-visible" : ""}`} id="projects" ref={sectionRef}>
       <div className="projects-frame">
