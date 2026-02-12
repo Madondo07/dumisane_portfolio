@@ -93,7 +93,7 @@ function Projects() {
   }, []);
 
   useEffect(() => {
-    const frame = sectionRef.current;
+    const frame = sectionRef.current.querySelector('.projects-frame');
     const container = carouselRef.current;
     if (!frame || !container) return;
     const calc = () => {
