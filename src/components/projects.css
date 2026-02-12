@@ -57,6 +57,7 @@
 .project-inner {
   max-width: 100%;
   min-height: 100%;
+  height: var(--card-h);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;

@@ -97,12 +97,14 @@ function Projects() {
     const container = carouselRef.current;
     if (!frame || !container) return;
     const calc = () => {
-      const inners = container.querySelectorAll('.project-inner');
-      let max = 0;
-      inners.forEach((n) => { max = Math.max(max, n.offsetHeight || 0); });
-      const extra = 56; // leave space for actions
-      frame.style.setProperty('--card-h', `${max + extra}px`);
-    };
+  requestAnimationFrame(() => {
+    const inners = container.querySelectorAll('.project-inner');
+    let max = 0;
+    inners.forEach((n) => { max = Math.max(max, n.offsetHeight || 0); });
+    const extra = 56;
+    frame.style.setProperty('--card-h', `${max + extra}px`);
+  });
+};
     calc();
     const ro = new ResizeObserver(calc);
     const inners = container.querySelectorAll('.project-inner');
