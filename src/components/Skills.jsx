@@ -1,5 +1,5 @@
+'use client';
 import React, { useEffect, useRef, useState } from "react";
-import "./skills.css";
 
 function Icon({ name }) {
   if (name === "frontend") {

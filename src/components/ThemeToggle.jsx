@@ -1,5 +1,5 @@
+'use client';
 import React, { useEffect, useState } from "react";
-import "./navbar.css";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState(() => {

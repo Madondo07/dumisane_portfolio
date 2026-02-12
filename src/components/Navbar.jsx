@@ -1,14 +1,16 @@
+'use client';
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import "./navbar.css";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import logo from "../assets/logomain2.png";
 
 function Navbar() {
+  if (typeof window === 'undefined') return null;
   const [hidden, setHidden] = useState(false);
   const [navH, setNavH] = useState(68);
   const navRef = useRef(null);
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter();
+  const pathname = typeof window !== "undefined" ? window.location.pathname : router.pathname;
 
   useEffect(() => {
     const HIDE_AT = 280; // hide when scrolled deeper into the page
@@ -50,7 +52,7 @@ function Navbar() {
           <div
             className="flex items-center cursor-pointer"
             onClick={() => {
-              if (location.pathname !== "/") navigate("/");
+              if (pathname !== "/") router.push("/");
               requestAnimationFrame(() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               });
@@ -58,8 +60,7 @@ function Navbar() {
             aria-label="Home"
           >
             <img
-              src={window.location.origin + '/logomain2.png'}
-              onError={(e) => { e.currentTarget.src = logo; }}
+              src={logo.src ?? logo}
               alt="Dumisane.dev"
               className="nav-logo h-5 md:h-6 w-auto mr-2 align-middle"
             />
@@ -71,7 +72,7 @@ function Navbar() {
               <button
                 className="px-4 py-2 rounded-lg transition-all duration-300 fallback-navbar__link"
                 onClick={() => {
-                  if (location.pathname !== "/") navigate("/");
+                  if (pathname !== "/") router.push("/");
                   setTimeout(() => {
                     const el = document.getElementById("home");
                     if (el) window.scrollTo({ top: el.offsetTop - 96, behavior: "smooth" });
@@ -83,7 +84,7 @@ function Navbar() {
               <button
                 className="px-4 py-2 rounded-lg transition-all duration-300 fallback-navbar__link"
                 onClick={() => {
-                  if (location.pathname !== "/") navigate("/");
+                  if (pathname !== "/") router.push("/");
                   setTimeout(() => {
                     const el = document.getElementById("skills");
                     if (el) window.scrollTo({ top: el.offsetTop - 96, behavior: "smooth" });
@@ -95,7 +96,7 @@ function Navbar() {
               <button
                 className="px-4 py-2 rounded-lg transition-all duration-300 fallback-navbar__link"
                 onClick={() => {
-                  if (location.pathname !== "/") navigate("/");
+                  if (pathname !== "/") router.push("/");
                   setTimeout(() => {
                     const el = document.getElementById("projects");
                     if (el) window.scrollTo({ top: el.offsetTop - 96, behavior: "smooth" });
@@ -104,9 +105,7 @@ function Navbar() {
               >
                 Projects
               </button>
-              <Link to="/contact" className="px-4 py-2 rounded-lg transition-all duration-300 fallback-navbar__link">
-                Contact
-              </Link>
+              <Link href="/contact" className="px-4 py-2 rounded-lg transition-all duration-300 fallback-navbar__link">Contact</Link>
             </div>
           </div>
         </div>

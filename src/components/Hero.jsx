@@ -1,10 +1,10 @@
+'use client';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import './hero.css';
 import fallback from '../assets/intro.png';
 
 export default function Hero() {
   // hero image, otherwise fallback bundled asset
-  const src = window.location.origin + '/intro.png';
+  const src = typeof fallback === 'string' ? fallback : (fallback?.src || '/intro.png');
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const roles = useMemo(() => [
@@ -99,12 +99,7 @@ export default function Hero() {
       <div className="hero-frame">
         <div className="hero-inner">
           <div className="hero-media reveal" style={{ transitionDelay: '60ms' }}>
-          <img
-            src={src}
-            onError={(e) => { e.currentTarget.src = fallback }}
-            alt="hero"
-            className="hero-image"
-          />
+          <img src={src} alt="dumisane display picture" className="hero-image" />
         </div>
 
         <div className="hero-content reveal" style={{ transitionDelay: '140ms' }}>

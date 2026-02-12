@@ -1,7 +1,7 @@
+'use client';
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import "./contact.css";
 
 export default function Contact() {
   const sectionRef = useRef(null);

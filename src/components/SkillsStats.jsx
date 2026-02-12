@@ -1,5 +1,5 @@
+'use client';
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import "./skills-stats.css";
 
 export default function SkillsStats() {
   const ref = useRef(null);
