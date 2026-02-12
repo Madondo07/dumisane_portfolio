@@ -5,12 +5,11 @@ import { useRouter } from "next/router";
 import logo from "../assets/logomain2.png";
 
 function Navbar() {
-  if (typeof window === 'undefined') return null;
   const [hidden, setHidden] = useState(false);
   const [navH, setNavH] = useState(68);
   const navRef = useRef(null);
   const router = useRouter();
-  const pathname = typeof window !== "undefined" ? window.location.pathname : router.pathname;
+  const pathname = router.pathname;
 
   useEffect(() => {
     const HIDE_AT = 280; // hide when scrolled deeper into the page

@@ -12,7 +12,7 @@ export default function Footer() {
             </span>
             <span>dumisanemadondo926@gmail.com</span>
           </a>
-          <span className="footer-sep" aria-hidden="true">|</span>
+          <span className="footer-sep" aria-hidden="true"></span>
           <div className="socials">
           <a aria-label="LinkedIn" className="social-link" href="https://www.linkedin.com/in/dumisane-madondo-34261626b" target="_blank" rel="noopener noreferrer">
             <svg className="social-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98 1.98-.88 1.98-1.98S6.08 3.5 4.98 3.5zM3 8.98h3.96V21H3V8.98zm7.47 0H14v1.58h.05c.48-.9 1.66-1.85 3.42-1.85 3.66 0 4.34 2.41 4.34 5.55V21h-3.55v-5.4c0-1.29 0-2.95-1.8-2.95-1.8 0-2.08 1.41-2.08 2.86V21H10.47V8.98z" fill="currentColor"/></svg>
