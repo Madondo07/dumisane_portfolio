@@ -209,9 +209,18 @@ html.dark .project-actions .project-icon-btn { border-color: rgba(255,255,255,0.
 
 @media (max-width: 768px) {
   .projects-frame { padding-left: 0; padding-right: 0; }
-  .projects-carousel { gap: 1rem; }
+  .projects-carousel {
+    gap: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+  }
   .projects-controls { display: none; }
-  .project-item { flex: 0 0 100%; height: auto; }
+  .project-item { flex: 0 0 100%; height: auto; scroll-snap-align: start; }
   .project-inner { gap: 1rem; overflow: visible; }
   .project-actions { flex-direction: column; align-items: stretch; margin-top: 0; }
   .project-actions .project-btn { width: 100%; }

@@ -55,7 +55,7 @@ function Projects() {
 
   const carouselRef = useRef(null);
   const sectionRef = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const handleView = (project) => {
     const url = project?.demo || project?.repo;
     if (!url) return;
