@@ -93,26 +93,26 @@ function Projects() {
   }, []);
 
   useEffect(() => {
-    const frame = sectionRef.current.querySelector('.projects-frame');
+    const frame = sectionRef.current?.querySelector('.projects-frame');
     const container = carouselRef.current;
     if (!frame || !container) return;
+
     const calc = () => {
-  requestAnimationFrame(() => {
-    const inners = container.querySelectorAll('.project-inner');
-    let max = 0;
-    inners.forEach((n) => { max = Math.max(max, n.offsetHeight || 0); });
-    const extra = 56;
-    frame.style.setProperty('--card-h', `${max + extra}px`);
-  });
-};
-    calc();
-    const ro = new ResizeObserver(calc);
-    const inners = container.querySelectorAll('.project-inner');
-    inners.forEach((n) => ro.observe(n));
+      const inners = container.querySelectorAll('.project-inner');
+      let max = 0;
+      inners.forEach((n) => { max = Math.max(max, n.offsetHeight || 0); });
+      const extra = 56;
+      frame.style.setProperty('--card-h', `${max + extra}px`);
+    };
+
+    // Initial calculation after DOM is rendered
+    requestAnimationFrame(() => {
+      requestAnimationFrame(calc);
+    });
+
     window.addEventListener('resize', calc);
     return () => {
       window.removeEventListener('resize', calc);
-      ro.disconnect();
     };
   }, [projects.length, visible]);
 

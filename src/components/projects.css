@@ -34,18 +34,20 @@
 
 .projects-carousel {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
   gap: 2rem;
   position: relative;
-  overflow: visible;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
 }
 
 .projects-carousel::-webkit-scrollbar { display: none; }
 
 
 .project-item {
-  flex: 0 0 calc((100% - 4rem) / 3);
+  flex: 0 0 calc(33.333% - 1.33rem);
   min-height: var(--card-h, 540px);
   background: linear-gradient(90deg, var(--hero-end), var(--hero-start));
   padding: 15px;
