@@ -1401,7 +1401,7 @@ html.dark .hero-inner {
 }
 
 .project-list {
-  flex: auto;
+  flex: none;
   min-height: 0;
   margin: 0;
   padding: 0;
@@ -1421,7 +1421,8 @@ html.dark .hero-inner {
   gap: .75rem;
   width: 100%;
   margin-top: auto;
-  padding-top: .75rem;
+  margin-bottom: 0;
+  padding-top: 0;
   display: flex;
   position: static;
 }

@@ -109,11 +109,6 @@ function Projects() {
     requestAnimationFrame(() => {
       requestAnimationFrame(calc);
     });
-
-    window.addEventListener('resize', calc);
-    return () => {
-      window.removeEventListener('resize', calc);
-    };
   }, [projects.length, visible]);
 
   return (
