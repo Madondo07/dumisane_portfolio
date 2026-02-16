@@ -43,7 +43,6 @@ function Navbar() {
   }, []);
   return (
     <>
-      {hidden && <div className="nav-blur" style={{ height: navH }} aria-hidden="true" />}
       <nav ref={navRef} className={`fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl fallback-navbar ${hidden ? "nav-hidden" : ""}`}>
       <div className="rounded-2xl shadow-xl px-6 py-3">
         <div className="flex items-center justify-between fallback-navbar__inner">

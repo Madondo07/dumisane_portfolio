@@ -1,6 +1,7 @@
 .contact-page {
-  padding: 10rem 1.5rem 6rem; /* extra space below navbar and above footer */
+  padding: 10rem 1rem 6rem; /* extra space below navbar and above footer */
   background: var(--bg);
+  overflow-x: hidden;
 }
 
 .contact-panel {
@@ -9,7 +10,8 @@
   background: linear-gradient(135deg, var(--hero-start), var(--hero-end));
   border-radius: 16px;
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-  padding: 1.5rem;
+  padding: 2rem;
+  overflow: hidden;
 }
 
 .contact-heading {
@@ -29,8 +31,8 @@
 .contact-divider { height: 2px; background: var(--accent); opacity: 0.9; margin: 0 0 1rem 0; }
 .contact-v-divider { width: 2px; background: var(--accent); opacity: 0.9; border-radius: 2px; align-self: stretch; }
 
-.contact-left { color: var(--text); padding: 0 1rem; }
-.contact-list { list-style:none; padding:0; margin:0 0 0.75rem 0; }
+.contact-left { color: var(--text); padding: 0; }
+.contact-list { list-style:none; padding:0; margin:0 0 0.75rem 0; word-break: break-word; overflow-wrap: break-word; }
 .contact-list li { display:flex; align-items:center; gap:0.6rem; margin:0.4rem 0; }
 .contact-icon { width:20px; height:20px; stroke: currentColor; fill:none; }
 
@@ -41,7 +43,7 @@
 
 .contact-right { display:flex; flex-direction:column; }
 .form-row { margin-bottom: 0.75rem; }
-.input, .textarea { width:100%; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08); padding: 0.75rem 0.9rem; background: var(--surface); color: var(--text); }
+.input, .textarea { width:100%; box-sizing: border-box; border-radius: 10px; border: 1px solid rgba(0,0,0,0.08); padding: 0.75rem 0.9rem; background: var(--surface); color: var(--text); }
 .contact-right .submit {
   display:flex; align-items:center; justify-content:center;
   width: 90%; margin: 0.5rem auto 0; padding: 0.5rem 0.75rem;
@@ -51,8 +53,24 @@
 .contact-right .submit:hover { background: #535bf2; }
 
 @media (max-width: 768px) {
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-page { padding: 10rem 0.75rem 6rem; }
+  .contact-panel { padding: 1.5rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .contact-v-divider { display: none; }
+  
+  /* horizontal divider for mobile */
+  .contact-grid::after {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 1px;
+    background: var(--accent);
+    opacity: 0.5;
+    margin-top: -0.75rem;
+  }
+  
+  .contact-left { padding: 0 0 1.5rem 0; border-bottom: 1px solid var(--accent); border-bottom-opacity: 0.5; }
 }
 .contact-page .reveal { opacity: 0; transform: translateY(16px); }
 .contact-visible .reveal { opacity: 1; transform: none; transition: opacity 420ms ease, transform 420ms ease; }

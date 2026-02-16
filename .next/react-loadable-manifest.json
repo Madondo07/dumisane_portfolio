@@ -1,0 +1,26 @@
+{
+  "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 1806,
+    "files": [
+      "static/chunks/806.a7e9447414a53493.js"
+    ]
+  },
+  "node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 8123,
+    "files": [
+      "static/chunks/123.f3d27f38429d3ab5.js"
+    ]
+  },
+  "pages\\_app.jsx -> ../src/components/Navbar": {
+    "id": 8854,
+    "files": [
+      "static/chunks/854.af2cd0ebc2fad6c0.js"
+    ]
+  },
+  "pages\\_app.jsx -> ../src/components/ThemeToggle": {
+    "id": 8250,
+    "files": [
+      "static/chunks/250.a5884e0731a37a82.js"
+    ]
+  }
+}
