@@ -99,7 +99,14 @@ export default function Hero() {
       <div className="hero-frame">
         <div className="hero-inner">
           <div className="hero-media reveal" style={{ transitionDelay: '60ms' }}>
-          <Image src={fallback} alt="dumisane display picture" className="hero-image" priority />
+          <Image
+            src={fallback}
+            alt="dumisane display picture"
+            className="hero-image"
+            priority
+            width={400}
+            height={400}
+          />
         </div>
 
         <div className="hero-content reveal" style={{ transitionDelay: '140ms' }}>

@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@iconify/react": "^6.0.2",
-    "aos": "^2.3.4",
     "axios": "^1.13.2",
     "framer-motion": "^12.23.24",
     "next": "^15.0.0",

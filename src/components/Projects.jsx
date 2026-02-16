@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useLayoutEffect } from "react";
 
 function Projects() {
   const projects = [
@@ -92,7 +92,7 @@ function Projects() {
     return () => obs.disconnect();
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const frame = sectionRef.current?.querySelector('.projects-frame');
     const container = carouselRef.current;
     if (!frame || !container) return;
@@ -105,10 +105,8 @@ function Projects() {
       frame.style.setProperty('--card-h', `${max + extra}px`);
     };
 
-    // Initial calculation after DOM is rendered
-    requestAnimationFrame(() => {
-      requestAnimationFrame(calc);
-    });
+    // Run synchronously before paint to avoid layout shift
+    calc();
   }, [projects.length, visible]);
 
   return (

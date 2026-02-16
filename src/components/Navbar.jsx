@@ -62,6 +62,8 @@ function Navbar() {
               src={logo.src ?? logo}
               alt="Dumisane.dev"
               className="nav-logo h-5 md:h-6 w-auto mr-2 align-middle"
+              width={32}
+              height={32}
             />
           </div>
 

@@ -18,7 +18,9 @@ export default function MyApp(props) {
     <div className="min-h-screen app-root">
       <ThemeToggle />
       <Navbar />
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
       <Footer />
     </div>
   );
