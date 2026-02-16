@@ -6,7 +6,6 @@ import logo from "../assets/logomain2.png";
 
 function Navbar() {
   const [hidden, setHidden] = useState(false);
-  const [navH, setNavH] = useState(68);
   const navRef = useRef(null);
   const router = useRouter();
   const pathname = router.pathname;
@@ -29,17 +28,6 @@ function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  useEffect(() => {
-    const measure = () => {
-      const el = navRef.current;
-      if (!el) return;
-      const h = el.offsetHeight || 68;
-      setNavH(h);
-    };
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
   }, []);
   return (
     <>
