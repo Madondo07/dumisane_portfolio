@@ -77,3 +77,15 @@
 .contact-status { margin: 0.75rem auto 0; width: 90%; padding: 0.5rem 0.75rem; border-radius: 8px; display:flex; align-items:center; gap: 0.5rem; }
 .contact-status.success { background: rgba(34, 197, 94, 0.12); color: var(--text); }
 .contact-status.error { background: rgba(244, 63, 94, 0.12); color: var(--text); }
+
+.error-text {
+  color: #f43f5e;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: block;
+  font-weight: 500;
+}
+
+.input-error, .textarea-error {
+  border-color: #f43f5e !important;
+}

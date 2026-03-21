@@ -112,8 +112,8 @@ function Projects() {
   return (
     <section className={`projects-section ${visible ? "projects-visible" : ""}`} id="projects" ref={sectionRef}>
       <div className="projects-frame">
-        <div className="projects-header reveal">
-          <h2>Projects</h2>
+        <div className="section-header reveal">
+          <h2 className="section-title">Applied Projects</h2>
           <p className="projects-sub">Projects I've worked on, with a focus on creating user-friendly and impactful solutions.</p>
         </div>
         <div className="projects-carousel reveal" ref={carouselRef}>

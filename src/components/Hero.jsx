@@ -81,19 +81,6 @@ export default function Hero() {
     return () => clearInterval(int);
   }, [showAbout, aboutRoleIndex, roles]);
 
-  const handleViewResume = () => {
-    const href = '/resume.pdf';
-    const now = new Date();
-    const dd = String(now.getDate()).padStart(2, '0');
-    const mm = String(now.getMonth() + 1).padStart(2, '0');
-    const a = document.createElement('a');
-    a.href = href;
-    a.download = `Dumisane_Madondo_Resume_${dd}-${mm}.pdf`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  };
-
   return (
     <section className={`hero-outer ${visible ? 'hero-visible' : ''}`} id="home" ref={sectionRef}>
       <div className="hero-frame">
@@ -118,19 +105,18 @@ export default function Hero() {
               <p className="hero-sub">passionate about creating scalable, user-friendly applications. Currently pursuing a Diploma in ICT Application Development at Cape Peninsula University of Technology, I combine academic knowledge with hands-on experience to design and refine systems that balance functionality with user experience. Driven by curiosity and innovation, I thrive on turning ideas into solutions that empower both users and teams.</p>
               <div className="hero-ctas">
                 <button className="btn" type="button" onClick={() => setShowAbout(true)}>More About Me</button>
-                <button className="btn btn-outline" type="button" onClick={handleViewResume}>Download Resume</button>
+                <a href="/resume.pdf" download="Dumisane_Madondo_Resume.pdf" className="btn btn-outline">Download Resume</a>
               </div>
             </>
           ) : (
             <>
               <p className="hero-sub">My name is Dumisane Madondo, and I'm a <span className={`role-item ${roleClasses[aboutRoleIndex]}`}>{roles[aboutRoleIndex].slice(0, aboutTypedLen)}</span><br className="role-br" /> driven by a passion for building efficient, scalable, and user-friendly applications.</p>
-              <p className="hero-sub">With a strong foundation in both academics and hands-on experience, I thrive at the intersection of problem-solving and innovation, consistently transforming complex challenges into practical, well-crafted solutions that drive progress..</p>
-              <p className="hero-sub">I am currently pursuing a Diploma in ICT Application Development at Cape Peninsula University of Technology, where I focus on mastering modern development practices and applying them to real-world projects. This academic journey complements my professional growth, equipping me with the ability to design, build, and refine systems that balance functionality with user experience.</p>
-              <p className="hero-sub">What excites me most about development is the creative process of turning ideas into working solutions. Whether it’s building reusable APIs, troubleshooting mobile/web workflows, or designing recruiter-friendly portfolio interfaces, I approach each challenge with curiosity, resilience, and a commitment to excellence. My passion lies in crafting systems that not only work but also empower users and teams to achieve more.</p>
-              <p className="hero-sub">Continuous learning and innovation are at the heart of my journey, and I am eager to contribute to projects that push boundaries in development.</p>
+              <p className="hero-sub">With a strong foundation in academics and hands‑on project experience, I thrive at the intersection of problem‑solving and innovation, consistently transforming complex challenges into practical solutions.</p>
+              <p className="hero-sub">Currently pursuing a Diploma in ICT: Application Development at Cape Peninsula University of Technology, I focus on mastering modern development practices and applying them to real‑world projects. From reusable APIs to seamless web workflows, I approach each challenge with curiosity, resilience, and a commitment to excellence. </p>
+              <p className="hero-sub">My journey is anchored in continuous learning and innovation, with the goal of crafting systems that empower both users and teams. I am eager to contribute to projects that push boundaries in development.</p>
               <div className="hero-ctas">
                 <button className="btn btn-outline" type="button" onClick={() => setShowAbout(false)}>Show Less</button>
-                <button className="btn" type="button" onClick={handleViewResume}>Download Resume</button>
+                <a href="/resume.pdf" download="Dumisane_Madondo_Resume.pdf" className="btn">Download Resume</a>
               </div>
             </>
           )}

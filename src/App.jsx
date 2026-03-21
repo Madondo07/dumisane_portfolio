@@ -8,11 +8,11 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import SkillsStats from './components/SkillsStats';
+import AcademicBackground from './components/academic';
 
 function App() {
   return (
     <div className="min-h-screen app-root">
-      <ThemeToggle />
       <Navbar />
       <Routes>
         <Route path="/contact" element={<Contact />} />
@@ -23,6 +23,7 @@ function App() {
               <Hero />
               <Skills />
               <SkillsStats />
+              <AcademicBackground />
               <Projects />
             </>
           )}

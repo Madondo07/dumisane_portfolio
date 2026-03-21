@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 
 function Icon({ name }) {
   if (name === "frontend") {
@@ -26,8 +26,8 @@ export default function Skills() {
   const groups = [
     { title: "Frontend", icon: "frontend", items: ["HTML/CSS", "JavaScript", "React", "Tailwind CSS", "Responsive Design", "Performance Optimization"] },
     { title: "Backend", icon: "backend", items: ["Java", "Python", "PHP", "REST APIs", "JWT Authentication", "Workflow Troubleshooting"] },
-    { title: "Database", icon: "database", items: ["MySQL", "SQLite (Python)", "Schema Design", "Query Optimization", "Firebase/Firestore"] },
-    { title: "Tools", icon: "tools", items: ["Git/GitHub", "VS Code", "Postman", "DevTools", "Figma", "Netlify"] },
+    { title: "Database", icon: "database", items: ["MySQL", "SQLite (Python)", "Supabase", "Schema Design", "Query Optimization", "Firebase"] },
+    { title: "Tools", icon: "tools", items: ["Git/GitHub", "VS Code", "Postman", "Vercel", "DevTools", "Figma", "Netlify"] },
   ];
 
   const sectionRef = useRef(null);
@@ -45,27 +45,45 @@ export default function Skills() {
     return () => obs.disconnect();
   }, []);
 
+  const allSkills = useMemo(() => {
+    const flat = [];
+    groups.forEach(g => {
+      g.items.forEach(item => {
+        flat.push({ name: item, category: g.icon });
+      });
+    });
+    return flat;
+  }, [groups]);
+
+  // Split into two rows
+  const row1 = useMemo(() => allSkills.filter((_, i) => i % 2 === 0), [allSkills]);
+  const row2 = useMemo(() => allSkills.filter((_, i) => i % 2 !== 0), [allSkills]);
+
   return (
     <section className={`skills-section ${visible ? 'skills-visible' : ''}`} id="skills" ref={sectionRef}>
       <div className="skills-frame">
-        <div className="skills-header reveal">
-          <h2>Technical Skills</h2>
-        </div>
-        <div className="skills-grid">
-          {groups.map((g, i) => (
-            <div key={i} className="skill-item reveal" style={{ transitionDelay: `${i * 120}ms` }}>
-              <div className="skill-inner">
-                <div className="skill-title">
-                  <Icon name={g.icon} />
-                  <span>{g.title}</span>
-                </div>
-                <div className="skill-divider" />
-                <p className="skills-sentence">
-                  {g.items.map((s) => s.toUpperCase()).join(", ")}
-                </p>
-              </div>
+        <div className="skills-marquee-container">
+          {/* Top Row: Left to Right */}
+          <div className="marquee-row marquee-ltr">
+            <div className="marquee-content">
+              {[...row1, ...row1].map((s, i) => (
+                <span key={i} className="skill-tag" data-category={s.category}>
+                  {s.name}
+                </span>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Bottom Row: Right to Left */}
+          <div className="marquee-row marquee-rtl">
+            <div className="marquee-content">
+              {[...row2, ...row2].map((s, i) => (
+                <span key={i} className="skill-tag" data-category={s.category}>
+                  {s.name}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -6,9 +6,20 @@ import { useForm } from "react-hook-form";
 export default function Contact() {
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const [sending, setSending] = useState(false);
   const [result, setResult] = useState(null);
+
+  // Auto-dismiss the status message after 6 seconds
+  useEffect(() => {
+    if (result) {
+      const timer = setTimeout(() => {
+        setResult(null);
+      }, 6000);
+      return () => clearTimeout(timer);
+    }
+  }, [result]);
+
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -26,20 +37,22 @@ export default function Contact() {
     try {
       setSending(true);
       setResult(null);
-      const access_key = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+      const access_key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
       if (!access_key) {
         throw new Error("Missing access key");
       }
       const payload = {
         access_key,
-        subject: "Dumisane Madondo | Contact Form",
+        subject: `New Message from ${data.name} via Portfolio`,
         from_name: data.name,
         from_email: data.email,
         message: data.message,
+        // Add additional info for your records
+        sent_from: "Dumisane Madondo Portfolio",
       };
       const res = await axios.post("https://api.web3forms.com/submit", payload, { headers: { "Content-Type": "application/json" } });
       if (res?.data?.success) {
-        setResult({ ok: true, msg: "Email sent successfully from your portfolio." });
+        setResult({ ok: true, msg: "Email sent successfully." });
         reset();
       } else {
         throw new Error("Failed to send");
@@ -76,10 +89,10 @@ export default function Contact() {
             </ul>
 
             <div className="contact-socials">
-              <a href="#" aria-label="LinkedIn" className="social-a">
+              <a href="https://www.linkedin.com/in/dumisane-madondo-34261626b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-a">
                 <svg className="social-svg" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48s.88 1.98 1.98 1.98 1.98-.88 1.98-1.98S6.08 3.5 4.98 3.5zM3 8.98h3.96V21H3V8.98zm7.47 0H14v1.58h.05c.48-.9 1.66-1.85 3.42-1.85 3.66 0 4.34 2.41 4.34 5.55V21h-3.55v-5.4c0-1.29 0-2.95-1.8-2.95-1.8 0-2.08 1.41-2.08 2.86V21h-3.41V8.98z"/></svg>
               </a>
-              <a href="#" aria-label="GitHub" className="social-a">
+              <a href="https://github.com/Madondo07" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="social-a">
                 <svg className="social-svg" viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 0 12.6c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.8.8 2.3 1.2.1-.9.4-1.6.8-2-2.7-.3-5.5-1.4-5.5-6.1 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11.4 11.4 0 0 1 12 7.9c1 0 2-.1 3-.4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.3 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.8-5.5 6.1.4.3.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.8-1.6 8.2-6.1 8.2-11.4A12 12 0 0 0 12 .5z"/></svg>
               </a>
               <a href="#" aria-label="Discord" className="social-a">
@@ -92,18 +105,21 @@ export default function Contact() {
           <form className="contact-right reveal" style={{ transitionDelay: '160ms' }} onSubmit={handleSubmit(onSubmit)}>
             <h3 className="contact-title">Get in Touch</h3>
             <div className="form-row">
-              <input type="text" placeholder="Name" className="input" {...register("name", { required: true, minLength: 2 })} />
+              <input type="text" placeholder="Name" className={`input ${errors.name ? 'input-error' : ''}`} {...register("name", { required: "Name is required", minLength: { value: 2, message: "Min 2 characters" } })} />
+              {errors.name && <span className="error-text">{errors.name.message}</span>}
             </div>
             <div className="form-row">
-              <input type="email" placeholder="Email" className="input" {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })} />
+              <input type="email" placeholder="Email" className={`input ${errors.email ? 'input-error' : ''}`} {...register("email", { required: "Email is required", pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Invalid email" } })} />
+              {errors.email && <span className="error-text">{errors.email.message}</span>}
             </div>
             <div className="form-row">
-              <textarea placeholder="Message" className="textarea" rows={4} {...register("message", { required: true, minLength: 10 })}></textarea>
+              <textarea placeholder="Message" className={`textarea ${errors.message ? 'textarea-error' : ''}`} rows={4} {...register("message", { required: "Message is required", minLength: { value: 10, message: "Min 10 characters" } })}></textarea>
+              {errors.message && <span className="error-text">{errors.message.message}</span>}
             </div>
             <button type="submit" className="submit" disabled={sending}>{sending ? "Sending..." : "Submit"}</button>
             {result && (
               <div className={`contact-status ${result.ok ? "success" : "error"}`} aria-live="polite">
-                <strong>{result.ok ? "Portfolio Contact" : "Error"}</strong>
+                <strong>{result.ok ? "Success" : "Error"}</strong>
                 <span> — {result.msg}</span>
               </div>
             )}
