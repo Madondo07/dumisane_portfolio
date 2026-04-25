@@ -149,10 +149,10 @@ function Projects() {
         </div>
         <div className="projects-controls reveal" style={{ transitionDelay: `${projects.length * 140}ms` }}>
           <button className="proj-arrow left" aria-label="Previous" onClick={() => scrollBy("left")}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="nav-arrow-icon"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
           <button className="proj-arrow right" aria-label="Next" onClick={() => scrollBy("right")}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="nav-arrow-icon"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </button>
         </div>
       </div>

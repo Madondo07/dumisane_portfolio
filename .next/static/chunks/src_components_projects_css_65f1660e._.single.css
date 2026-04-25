@@ -61,9 +61,13 @@
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  transition: all .3s;
   display: flex;
   box-shadow: 0 4px 15px rgba(0, 0, 0, .15);
+}
+
+.nav-arrow-icon {
+  stroke: var(--text);
+  display: block;
 }
 
 .proj-arrow:hover {
@@ -71,6 +75,10 @@
   color: #fff;
   border-color: var(--accent);
   transform: scale(1.1);
+}
+
+.proj-arrow:hover .nav-arrow-icon {
+  stroke: #fff;
 }
 
 @media (max-width: 1200px) {

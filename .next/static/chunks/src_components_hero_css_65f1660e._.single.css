@@ -2,7 +2,7 @@
 .hero-outer {
   box-sizing: border-box;
   width: 100%;
-  padding: 10rem 2rem 3rem;
+  padding: 8rem 2rem 3rem;
   scroll-margin-top: 96px;
 }
 
@@ -98,6 +98,7 @@ html.dark .hero-inner:hover {
 
 @media (max-width: 880px) {
   .hero-outer {
+    padding-top: 7rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -138,7 +139,7 @@ html.dark .hero-inner:hover {
 
 @media (max-width: 480px) {
   .hero-outer {
-    padding-top: 4rem;
+    padding-top: 6.5rem;
     padding-left: .75rem;
     padding-right: .75rem;
   }
@@ -229,6 +230,22 @@ html.dark .hero-inner {
   50% {
     opacity: 0;
   }
+}
+
+.typewriter-container {
+  text-align: left;
+  vertical-align: bottom;
+  display: inline-grid;
+}
+
+.typewriter-ghost {
+  visibility: hidden;
+  pointer-events: none;
+  grid-area: 1 / 1;
+}
+
+.typewriter-text {
+  grid-area: 1 / 1;
 }
 
 /*# sourceMappingURL=src_components_hero_css_65f1660e._.single.css.map*/

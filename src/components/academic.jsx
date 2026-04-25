@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useState } from 'react';
 
 export default function AcademicBackground() {
   const sectionRef = useRef(null);
+  const sliderRef = useRef(null);
   const [visible, setVisible] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const education = [
     {
@@ -68,21 +68,35 @@ export default function AcademicBackground() {
     }
   ];
 
+  const scrollBy = (dir) => {
+    const el = sliderRef.current;
+    if (!el) return;
+    const first = el.firstElementChild;
+    const style = getComputedStyle(el);
+    const gap = parseFloat(style.columnGap || style.gap || "0") || 0;
+    const cardW = first ? first.getBoundingClientRect().width : el.clientWidth;
+    const amount = cardW + gap;
+    const target = el.scrollLeft + (dir === "left" ? -amount : amount);
+    el.scrollTo({ left: target, behavior: "smooth" });
+  };
+
   // Auto-focus on the 'In Progress' qualification on load
   useEffect(() => {
     const inProgressIndex = education.findIndex(item => item.status === "In Progress");
-    if (inProgressIndex !== -1) {
-      setCurrentIndex(inProgressIndex);
+    if (inProgressIndex !== -1 && sliderRef.current) {
+      // Small timeout ensures the DOM has fully laid out the flex items and gaps
+      setTimeout(() => {
+        const el = sliderRef.current;
+        if (!el) return;
+        const first = el.firstElementChild;
+        const style = getComputedStyle(el);
+        const gap = parseFloat(style.columnGap || style.gap || "0") || 0;
+        const cardW = first ? first.getBoundingClientRect().width : el.clientWidth;
+        const target = inProgressIndex * (cardW + gap);
+        el.scrollTo({ left: target, behavior: "instant" });
+      }, 100);
     }
   }, []); // Only run once on mount
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % education.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + education.length) % education.length);
-  };
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -111,14 +125,12 @@ export default function AcademicBackground() {
         <div className="academic-slider-wrapper reveal">
           <div 
             className="academic-slider" 
-            style={{ 
-              transform: `translateX(calc(7.5% - ${currentIndex * 85}% - ${currentIndex}rem))` 
-            }}
+            ref={sliderRef}
           >
             {education.map((item, index) => (
               <div 
                 key={index} 
-                className={`academic-slide ${index === currentIndex ? 'active' : ''}`}
+                className="academic-slide"
               >
                 <div className="academic-card">
                   <div className="card-left">
@@ -146,22 +158,13 @@ export default function AcademicBackground() {
             ))}
           </div>
 
-          <button className="slider-nav prev" onClick={prevSlide} aria-label="Previous slide">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <button className="slider-nav next" onClick={nextSlide} aria-label="Next slide">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-
-          <div className="slider-dots">
-            {education.map((_, i) => (
-              <button 
-                key={i} 
-                className={`dot ${i === currentIndex ? 'active' : ''}`}
-                onClick={() => setCurrentIndex(i)}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
+          <div className="projects-controls academic-controls">
+            <button className="slider-nav prev" onClick={() => scrollBy("left")} aria-label="Previous slide">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="nav-arrow-icon"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button className="slider-nav next" onClick={() => scrollBy("right")} aria-label="Next slide">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="nav-arrow-icon"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
           </div>
         </div>
       </div>

@@ -26,24 +26,26 @@
 
 .academic-slider {
   display: flex;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-wrap: nowrap;
   width: 100%;
-  gap: 1rem; /* Gap between slides */
+  gap: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+}
+
+.academic-slider::-webkit-scrollbar {
+  display: none;
 }
 
 .academic-slide {
-  flex: 0 0 85%; /* Shows 7.5% of previous and next cards */
-  width: 85%;
+  flex: 0 0 100%;
+  width: 100%;
   padding: 0;
   box-sizing: border-box;
-  opacity: 0.4;
-  transform: scale(0.9);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.academic-slide.active {
-  opacity: 1;
-  transform: scale(1.02); /* Slightly bigger to show focus */
+  scroll-snap-align: center;
 }
 
 .academic-card {
@@ -68,19 +70,28 @@ html.dark .academic-card {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.academic-slide.active .academic-card:hover {
+.academic-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-html.dark .academic-slide.active .academic-card:hover {
+html.dark .academic-card:hover {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-.slider-nav {
+.academic-controls {
   position: absolute;
   top: 50%;
+  left: -50px;
+  right: -50px;
   transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.slider-nav {
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -91,7 +102,7 @@ html.dark .academic-slide.active .academic-card:hover {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 20; /* Increased z-index */
+  pointer-events: auto;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
@@ -100,48 +111,46 @@ html.dark .academic-slide.active .academic-card:hover {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
-  transform: translateY(-50%) scale(1.1);
+  transform: scale(1.1);
 }
 
-.slider-nav.prev { left: 1rem; }
-.slider-nav.next { right: 1rem; }
-
-@media (max-width: 768px) {
-  .academic-slide {
-    flex: 0 0 85%;
-    width: 85%;
+@media (max-width: 1200px) {
+  .academic-controls {
+    display: flex !important;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    pointer-events: none;
+    z-index: 30;
+  }
+  
+  .slider-nav {
+    width: 40px;
+    height: 40px;
+    pointer-events: auto;
   }
 }
 
 .slider-nav svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-top: 1.5rem;
+.nav-arrow-icon {
+  stroke: var(--text);
+  display: block;
 }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: all 0.3s ease;
+.slider-nav:hover .nav-arrow-icon {
+  stroke: white;
 }
 
-html.dark .dot { background: rgba(255, 255, 255, 0.1); }
-
-.dot.active {
-  background: var(--accent);
-  transform: scale(1.2);
-}
+/* Dots styling removed */
 
 .card-left {
   display: flex;
@@ -261,23 +270,7 @@ html.dark .card-right {
   }
   .academic-slider-wrapper {
     padding: 1rem 0 3rem;
-    overflow-x: auto;
-    scrollbar-width: none; /* Firefox */
   }
-  .academic-slider-wrapper::-webkit-scrollbar {
-    display: none;
-  }
-  .slider-nav {
-    display: flex !important;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    z-index: 30;
-  }
-  .slider-nav.prev { left: 0.5rem; }
-  .slider-nav.next { right: 0.5rem; }
 }
 
 @media (max-width: 768px) {
@@ -288,15 +281,13 @@ html.dark .card-right {
     font-size: 1.35rem;
   }
   .academic-slide {
-    flex: 0 0 88%;
-    width: 88%;
+    flex: 0 0 100%;
+    width: 100%;
   }
   .slider-nav {
     width: 36px;
     height: 36px;
   }
-  .slider-nav.prev { left: 0.25rem; }
-  .slider-nav.next { right: 0.25rem; }
 }
 
 .academic-visible .reveal {
