@@ -147,23 +147,47 @@ function Hero() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h1", {
                                     className: "hero-title",
                                     children: [
-                                        "Hey There, I'm Dumisane Madondo ",
-                                        '{',
+                                        "Hi, I'm Dumisane Madondo",
+                                        ' ',
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
-                                            className: `role-item ${roleClasses[roleIndex]}`,
-                                            children: typed
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 103,
-                                            columnNumber: 17
-                                        }, this),
-                                        '}',
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {
-                                            className: "role-br"
-                                        }, void 0, false, {
+                                            className: "typewriter-container",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                    className: "typewriter-ghost",
+                                                    children: [
+                                                        '{',
+                                                        "Database Administrator|",
+                                                        '}'
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/components/Hero.jsx",
+                                                    lineNumber: 105,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                    className: "typewriter-text",
+                                                    children: [
+                                                        '{',
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
+                                                            className: `role-item ${roleClasses[roleIndex]}`,
+                                                            children: typed
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/Hero.jsx",
+                                                            lineNumber: 109,
+                                                            columnNumber: 26
+                                                        }, this),
+                                                        '}'
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/components/Hero.jsx",
+                                                    lineNumber: 108,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/src/components/Hero.jsx",
                                             lineNumber: 104,
-                                            columnNumber: 20
+                                            columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
@@ -176,7 +200,7 @@ function Hero() {
                                     children: "passionate about creating scalable, user-friendly applications. Currently pursuing a Diploma in ICT Application Development at Cape Peninsula University of Technology, I combine academic knowledge with hands-on experience to design and refine systems that balance functionality with user experience. Driven by curiosity and innovation, I thrive on turning ideas into solutions that empower both users and teams."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Hero.jsx",
-                                    lineNumber: 105,
+                                    lineNumber: 113,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -186,10 +210,10 @@ function Hero() {
                                             className: "btn",
                                             type: "button",
                                             onClick: ()=>setShowAbout(true),
-                                            children: "More About Me"
+                                            children: "Show More"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 107,
+                                            lineNumber: 115,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
@@ -199,13 +223,13 @@ function Hero() {
                                             children: "Download Resume"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 108,
+                                            lineNumber: 116,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Hero.jsx",
-                                    lineNumber: 106,
+                                    lineNumber: 114,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -220,21 +244,21 @@ function Hero() {
                                             children: roles[aboutRoleIndex].slice(0, aboutTypedLen)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 113,
+                                            lineNumber: 121,
                                             columnNumber: 78
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("br", {
                                             className: "role-br"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 113,
+                                            lineNumber: 121,
                                             columnNumber: 193
                                         }, this),
                                         " driven by a passion for building efficient, scalable, and user-friendly applications."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Hero.jsx",
-                                    lineNumber: 113,
+                                    lineNumber: 121,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -242,7 +266,7 @@ function Hero() {
                                     children: "With a strong foundation in academics and hands‑on project experience, I thrive at the intersection of problem‑solving and innovation, consistently transforming complex challenges into practical solutions."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Hero.jsx",
-                                    lineNumber: 114,
+                                    lineNumber: 122,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -250,7 +274,7 @@ function Hero() {
                                     children: "Currently pursuing a Diploma in ICT: Application Development at Cape Peninsula University of Technology, I focus on mastering modern development practices and applying them to real‑world projects. From reusable APIs to seamless web workflows, I approach each challenge with curiosity, resilience, and a commitment to excellence. "
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Hero.jsx",
-                                    lineNumber: 115,
+                                    lineNumber: 123,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -258,7 +282,7 @@ function Hero() {
                                     children: "My journey is anchored in continuous learning and innovation, with the goal of crafting systems that empower both users and teams. I am eager to contribute to projects that push boundaries in development."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Hero.jsx",
-                                    lineNumber: 116,
+                                    lineNumber: 124,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -271,7 +295,7 @@ function Hero() {
                                             children: "Show Less"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 118,
+                                            lineNumber: 126,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("a", {
@@ -281,13 +305,13 @@ function Hero() {
                                             children: "Download Resume"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Hero.jsx",
-                                            lineNumber: 119,
+                                            lineNumber: 127,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Hero.jsx",
-                                    lineNumber: 117,
+                                    lineNumber: 125,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -1007,18 +1031,39 @@ function AcademicBackground() {
             ]
         }
     ];
+    const sliderRef = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useRef"])(null);
     // Auto-focus on the 'In Progress' qualification on load
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         const inProgressIndex = education.findIndex((item)=>item.status === "In Progress");
         if (inProgressIndex !== -1) {
-            setCurrentIndex(inProgressIndex);
+            setTimeout(()=>{
+                const el = sliderRef.current;
+                if (!el) return;
+                const first = el.firstElementChild;
+                const style = getComputedStyle(el);
+                const gap = parseFloat(style.columnGap || style.gap || "0") || 0;
+                const cardW = first ? first.getBoundingClientRect().width : el.clientWidth;
+                const target = inProgressIndex * (cardW + gap);
+                el.scrollTo({
+                    left: target,
+                    behavior: "instant"
+                });
+            }, 100);
         }
     }, []); // Only run once on mount
-    const nextSlide = ()=>{
-        setCurrentIndex((prev)=>(prev + 1) % education.length);
-    };
-    const prevSlide = ()=>{
-        setCurrentIndex((prev)=>(prev - 1 + education.length) % education.length);
+    const scrollBy = (direction)=>{
+        const el = sliderRef.current;
+        if (!el) return;
+        const first = el.firstElementChild;
+        if (!first) return;
+        const style = getComputedStyle(el);
+        const gap = parseFloat(style.columnGap || style.gap || "0") || 0;
+        const cardW = first.getBoundingClientRect().width;
+        const amount = direction * (cardW + gap);
+        el.scrollBy({
+            left: amount,
+            behavior: 'smooth'
+        });
     };
     (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useEffect"])(()=>{
         const el = sectionRef.current;
@@ -1043,7 +1088,7 @@ function AcademicBackground() {
                 className: "section-divider reveal"
             }, void 0, false, {
                 fileName: "[project]/src/components/academic.jsx",
-                lineNumber: 102,
+                lineNumber: 117,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1057,7 +1102,7 @@ function AcademicBackground() {
                                 children: "Academic Foundation"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 105,
+                                lineNumber: 120,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1065,13 +1110,13 @@ function AcademicBackground() {
                                 children: "A learning journey shaped by dedication and progress."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 106,
+                                lineNumber: 121,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/academic.jsx",
-                        lineNumber: 104,
+                        lineNumber: 119,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1079,11 +1124,9 @@ function AcademicBackground() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                 className: "academic-slider",
-                                style: {
-                                    transform: `translateX(calc(7.5% - ${currentIndex * 85}% - ${currentIndex}rem))`
-                                },
+                                ref: sliderRef,
                                 children: education.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                        className: `academic-slide ${index === currentIndex ? 'active' : ''}`,
+                                        className: "academic-slide",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                             className: "academic-card",
                                             children: [
@@ -1096,12 +1139,12 @@ function AcademicBackground() {
                                                                 children: item.status
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/academic.jsx",
-                                                                lineNumber: 126,
+                                                                lineNumber: 139,
                                                                 columnNumber: 19
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 125,
+                                                            lineNumber: 138,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("h3", {
@@ -1109,7 +1152,7 @@ function AcademicBackground() {
                                                             children: item.degree
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 128,
+                                                            lineNumber: 141,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1121,7 +1164,7 @@ function AcademicBackground() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 129,
+                                                            lineNumber: 142,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -1129,13 +1172,13 @@ function AcademicBackground() {
                                                             children: item.description
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 130,
+                                                            lineNumber: 143,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/academic.jsx",
-                                                    lineNumber: 124,
+                                                    lineNumber: 137,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -1146,7 +1189,7 @@ function AcademicBackground() {
                                                             children: "CORE MODULES"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 134,
+                                                            lineNumber: 147,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("ul", {
@@ -1158,127 +1201,113 @@ function AcademicBackground() {
                                                                             className: "bullet"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/academic.jsx",
-                                                                            lineNumber: 138,
+                                                                            lineNumber: 151,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         mod
                                                                     ]
                                                                 }, mi, true, {
                                                                     fileName: "[project]/src/components/academic.jsx",
-                                                                    lineNumber: 137,
+                                                                    lineNumber: 150,
                                                                     columnNumber: 25
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 135,
+                                                            lineNumber: 148,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/academic.jsx",
-                                                    lineNumber: 133,
+                                                    lineNumber: 146,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/academic.jsx",
-                                            lineNumber: 123,
+                                            lineNumber: 136,
                                             columnNumber: 17
                                         }, this)
                                     }, index, false, {
                                         fileName: "[project]/src/components/academic.jsx",
-                                        lineNumber: 119,
+                                        lineNumber: 132,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 112,
+                                lineNumber: 127,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                 className: "slider-nav prev",
-                                onClick: prevSlide,
+                                onClick: ()=>scrollBy(-1),
                                 "aria-label": "Previous slide",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
                                     viewBox: "0 0 24 24",
                                     fill: "none",
                                     stroke: "currentColor",
-                                    strokeWidth: "2",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
-                                        d: "M15 18l-6-6 6-6"
+                                    strokeWidth: "2.5",
+                                    className: "nav-arrow-icon",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("polyline", {
+                                        points: "15 18 9 12 15 6"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/academic.jsx",
-                                        lineNumber: 150,
-                                        columnNumber: 88
+                                        lineNumber: 164,
+                                        columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/academic.jsx",
-                                    lineNumber: 150,
+                                    lineNumber: 163,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 149,
+                                lineNumber: 162,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
                                 className: "slider-nav next",
-                                onClick: nextSlide,
+                                onClick: ()=>scrollBy(1),
                                 "aria-label": "Next slide",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
                                     viewBox: "0 0 24 24",
                                     fill: "none",
                                     stroke: "currentColor",
-                                    strokeWidth: "2",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
-                                        d: "M9 18l6-6-6-6"
+                                    strokeWidth: "2.5",
+                                    className: "nav-arrow-icon",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("polyline", {
+                                        points: "9 18 15 12 9 6"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/academic.jsx",
-                                        lineNumber: 153,
-                                        columnNumber: 88
+                                        lineNumber: 169,
+                                        columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/academic.jsx",
-                                    lineNumber: 153,
+                                    lineNumber: 168,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 152,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                className: "slider-dots",
-                                children: education.map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
-                                        className: `dot ${i === currentIndex ? 'active' : ''}`,
-                                        onClick: ()=>setCurrentIndex(i),
-                                        "aria-label": `Go to slide ${i + 1}`
-                                    }, i, false, {
-                                        fileName: "[project]/src/components/academic.jsx",
-                                        lineNumber: 158,
-                                        columnNumber: 15
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 156,
+                                lineNumber: 167,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/academic.jsx",
-                        lineNumber: 111,
+                        lineNumber: 126,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/academic.jsx",
-                lineNumber: 103,
+                lineNumber: 118,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/academic.jsx",
-        lineNumber: 101,
+        lineNumber: 116,
         columnNumber: 5
     }, this);
 }
@@ -1656,21 +1685,17 @@ function Projects() {
                             "aria-label": "Previous",
                             onClick: ()=>scrollBy("left"),
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                width: "20",
-                                height: "20",
                                 viewBox: "0 0 24 24",
                                 fill: "none",
                                 stroke: "currentColor",
-                                strokeWidth: "2",
-                                strokeLinecap: "round",
-                                strokeLinejoin: "round",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
-                                    d: "M15 18l-6-6 6-6"
+                                strokeWidth: "2.5",
+                                className: "nav-arrow-icon",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("polyline", {
+                                    points: "15 18 9 12 15 6"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Projects.jsx",
-                                    lineNumber: 152,
-                                    columnNumber: 191
+                                    lineNumber: 153,
+                                    columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Projects.jsx",
@@ -1687,30 +1712,26 @@ function Projects() {
                             "aria-label": "Next",
                             onClick: ()=>scrollBy("right"),
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("svg", {
-                                xmlns: "http://www.w3.org/2000/svg",
-                                width: "20",
-                                height: "20",
                                 viewBox: "0 0 24 24",
                                 fill: "none",
                                 stroke: "currentColor",
-                                strokeWidth: "2",
-                                strokeLinecap: "round",
-                                strokeLinejoin: "round",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("path", {
-                                    d: "M9 6l6 6-6 6"
+                                strokeWidth: "2.5",
+                                className: "nav-arrow-icon",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("polyline", {
+                                    points: "9 18 15 12 9 6"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Projects.jsx",
-                                    lineNumber: 155,
-                                    columnNumber: 191
+                                    lineNumber: 158,
+                                    columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Projects.jsx",
-                                lineNumber: 155,
+                                lineNumber: 157,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/Projects.jsx",
-                            lineNumber: 154,
+                            lineNumber: 156,
                             columnNumber: 11
                         }, this)
                     ]

@@ -29,7 +29,12 @@
 
 .contact-title { margin: 0 0 0.75rem 0; color: var(--accent); text-align: center; font-weight: 700; font-size: 1.5rem; }
 .contact-divider { height: 2px; background: var(--accent); opacity: 0.9; margin: 0 0 1rem 0; }
-.contact-v-divider { width: 2px; background: var(--accent); opacity: 0.9; border-radius: 2px; align-self: stretch; }
+.contact-v-divider { 
+  width: 2px; 
+  background: linear-gradient(to bottom, transparent 5%, var(--accent) 25%, var(--accent) 75%, transparent 95%); 
+  opacity: 0.4; 
+  align-self: stretch; 
+}
 
 .contact-left { color: var(--text); padding: 0; }
 .contact-list { list-style:none; padding:0; margin:0 0 0.75rem 0; word-break: break-word; overflow-wrap: break-word; }
@@ -56,21 +61,16 @@
   .contact-page { padding: 10rem 0.75rem 6rem; }
   .contact-panel { padding: 1.5rem; }
   .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .contact-v-divider { display: none; }
   
-  /* horizontal divider for mobile */
-  .contact-grid::after {
-    content: '';
-    position: absolute;
-    left: 1.5rem;
-    right: 1.5rem;
-    height: 1px;
-    background: var(--accent);
-    opacity: 0.5;
-    margin-top: -0.75rem;
+  .contact-v-divider { 
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent 5%, var(--accent) 20%, var(--accent) 80%, transparent 95%);
+    margin: 0.5rem auto;
   }
   
-  .contact-left { padding: 0 0 1.5rem 0; border-bottom: 1px solid var(--accent); border-bottom-opacity: 0.5; }
+  .contact-left { padding: 0; border-bottom: none; }
 }
 .contact-page .reveal { opacity: 0; transform: translateY(16px); }
 .contact-visible .reveal { opacity: 1; transform: none; transition: opacity 420ms ease, transform 420ms ease; }

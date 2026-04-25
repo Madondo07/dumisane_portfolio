@@ -127,22 +127,28 @@ function Navbar() {
             </div>
           </div>
         </div>
-
-        {/* Mobile Menu Overlay */}
-        <div className={`mobile-menu md:hidden ${isOpen ? 'show' : ''}`}>
-          <div className="mobile-menu-content">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                className="mobile-link"
-                onClick={() => handleNavClick(link)}
-              >
-                {link.label}
-              </button>
-            ))}
-          </div>
-        </div>
       </nav>
+      {/* Mobile Menu Backdrop */}
+      <div 
+        className={`mobile-backdrop md:hidden ${isOpen ? 'show' : ''}`} 
+        onClick={closeMenu}
+        aria-hidden="true"
+      />
+
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu md:hidden ${isOpen ? 'show' : ''}`}>
+        <div className="mobile-menu-content">
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              className="mobile-link"
+              onClick={() => handleNavClick(link)}
+            >
+              {link.label}
+            </button>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

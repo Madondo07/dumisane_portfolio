@@ -99,12 +99,20 @@ export default function Hero() {
         <div className="hero-content reveal" style={{ transitionDelay: '140ms' }}>
           {!showAbout ? (
             <>
-              <h1 className="hero-title">Hey There, I'm Dumisane Madondo {'{'}
-                <span className={`role-item ${roleClasses[roleIndex]}`}>{typed}</span>
-              {'}'}<br className="role-br" /></h1>
+              <h1 className="hero-title">
+                Hi, I'm Dumisane Madondo{' '}
+                <span className="typewriter-container">
+                  <span className="typewriter-ghost">
+                    {'{'}Database Administrator|{'}'}
+                  </span>
+                  <span className="typewriter-text">
+                    {'{'}<span className={`role-item ${roleClasses[roleIndex]}`}>{typed}</span>{'}'}
+                  </span>
+                </span>
+              </h1>
               <p className="hero-sub">passionate about creating scalable, user-friendly applications. Currently pursuing a Diploma in ICT Application Development at Cape Peninsula University of Technology, I combine academic knowledge with hands-on experience to design and refine systems that balance functionality with user experience. Driven by curiosity and innovation, I thrive on turning ideas into solutions that empower both users and teams.</p>
               <div className="hero-ctas">
-                <button className="btn" type="button" onClick={() => setShowAbout(true)}>More About Me</button>
+                <button className="btn" type="button" onClick={() => setShowAbout(true)}>Show More</button>
                 <a href="/resume.pdf" download="Dumisane_Madondo_Resume.pdf" className="btn btn-outline">Download Resume</a>
               </div>
             </>
