@@ -2236,14 +2236,14 @@ function Projects() {
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Projects.jsx",
                                                                 lineNumber: 136,
-                                                                columnNumber: 288
+                                                                columnNumber: 289
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                                 d: "M10 14 21 3"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Projects.jsx",
                                                                 lineNumber: 136,
-                                                                columnNumber: 309
+                                                                columnNumber: 311
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
