@@ -1063,59 +1063,59 @@ function Icon(param) {
     }, this);
 }
 _c = Icon;
+const groups = [
+    {
+        title: "Frontend",
+        icon: "frontend",
+        items: [
+            "HTML/CSS",
+            "JavaScript",
+            "React",
+            "Tailwind CSS",
+            "Responsive Design",
+            "Performance Optimization"
+        ]
+    },
+    {
+        title: "Backend",
+        icon: "backend",
+        items: [
+            "Java",
+            "Python",
+            "PHP",
+            "REST APIs",
+            "JWT Authentication",
+            "Workflow Troubleshooting"
+        ]
+    },
+    {
+        title: "Database",
+        icon: "database",
+        items: [
+            "MySQL",
+            "SQLite (Python)",
+            "Supabase",
+            "Schema Design",
+            "Query Optimization",
+            "Firebase"
+        ]
+    },
+    {
+        title: "Tools",
+        icon: "tools",
+        items: [
+            "Git/GitHub",
+            "VS Code",
+            "Postman",
+            "Vercel",
+            "DevTools",
+            "Figma",
+            "Netlify"
+        ]
+    }
+];
 function Skills() {
     _s();
-    const groups = [
-        {
-            title: "Frontend",
-            icon: "frontend",
-            items: [
-                "HTML/CSS",
-                "JavaScript",
-                "React",
-                "Tailwind CSS",
-                "Responsive Design",
-                "Performance Optimization"
-            ]
-        },
-        {
-            title: "Backend",
-            icon: "backend",
-            items: [
-                "Java",
-                "Python",
-                "PHP",
-                "REST APIs",
-                "JWT Authentication",
-                "Workflow Troubleshooting"
-            ]
-        },
-        {
-            title: "Database",
-            icon: "database",
-            items: [
-                "MySQL",
-                "SQLite (Python)",
-                "Supabase",
-                "Schema Design",
-                "Query Optimization",
-                "Firebase"
-            ]
-        },
-        {
-            title: "Tools",
-            icon: "tools",
-            items: [
-                "Git/GitHub",
-                "VS Code",
-                "Postman",
-                "Vercel",
-                "DevTools",
-                "Figma",
-                "Netlify"
-            ]
-        }
-    ];
     const sectionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [visible, setVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
@@ -1567,72 +1567,71 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$ind
 var _s = __turbopack_context__.k.signature();
 'use client';
 ;
+const education = [
+    {
+        degree: "Secondary Education",
+        institution: "Madisong Secondary School",
+        class: "Class of 2021",
+        status: "National Senior Certificate",
+        description: "Built a strong academic foundation with a focus on Mathematics, Physics, and Geography, developing analytical thinking and problem‑solving skills that continue to shape my approach to technology and system design.",
+        modules: [
+            "Mathematics",
+            "Physical Sciences",
+            "English First Additional Language",
+            "Life Sciences",
+            "Geography"
+        ]
+    },
+    {
+        degree: "Higher Certificate in Information, Communication & Technology",
+        institution: "Cape Peninsula University of Technology (CPUT)",
+        class: "Class of 2023",
+        status: "Completed Qualification",
+        description: "A foundational qualification that introduced me to the principles of Information and Communication Technology, equipping me with essential technical and problem-solving skills for both academic progression and industry readiness.",
+        modules: [
+            "Information Systems Fundamentals",
+            "Programming Basics",
+            "Database Fundamentals",
+            "Computer Literacy",
+            "Communication Skills",
+            "Mathematics for ICT "
+        ]
+    },
+    {
+        degree: "Diploma in ICT: Application Development",
+        institution: "Cape Peninsula University of Technology (CPUT)",
+        class: "Ongoing",
+        status: "In Progress",
+        description: "A comprehensive qualification focused on designing, developing, and maintaining software applications, with strong emphasis on backend systems, database design, and bridging academic knowledge with industry practice.",
+        modules: [
+            "Software Development",
+            "Database Design & Management",
+            "Systems Analysis & Design (UML)",
+            "Project Management",
+            "Testing & Quality Assurance",
+            "Professional Communication"
+        ]
+    },
+    {
+        degree: "Advanced Diploma in ICT: Application Development",
+        institution: "Cape Peninsula University of Technology (CPUT)",
+        class: "Upcoming",
+        status: "Pending",
+        description: "An advanced qualification designed to deepen expertise in software engineering, enterprise systems, and applied research, preparing graduates for leadership roles in ICT projects and bridging academic knowledge with industry innovation.",
+        modules: [
+            "Advanced Software Engineering",
+            "Database Optimization & Big Data",
+            "Systems Integration",
+            "Research Methods in ICT",
+            "Project Leadership & Management",
+            "Emerging Technologies"
+        ]
+    }
+];
 function AcademicBackground() {
     _s();
     const sectionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [visible, setVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [currentIndex, setCurrentIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(0);
-    const education = [
-        {
-            degree: "Secondary Education",
-            institution: "Madisong Secondary School",
-            class: "Class of 2021",
-            status: "National Senior Certificate",
-            description: "Built a strong academic foundation with a focus on Mathematics, Physics, and Geography, developing analytical thinking and problem‑solving skills that continue to shape my approach to technology and system design.",
-            modules: [
-                "Mathematics",
-                "Physical Sciences",
-                "English First Additional Language",
-                "Life Sciences",
-                "Geography"
-            ]
-        },
-        {
-            degree: "Higher Certificate in Information, Communication & Technology",
-            institution: "Cape Peninsula University of Technology (CPUT)",
-            class: "Class of 2023",
-            status: "Completed Qualification",
-            description: "A foundational qualification that introduced me to the principles of Information and Communication Technology, equipping me with essential technical and problem-solving skills for both academic progression and industry readiness.",
-            modules: [
-                "Information Systems Fundamentals",
-                "Programming Basics",
-                "Database Fundamentals",
-                "Computer Literacy",
-                "Communication Skills",
-                "Mathematics for ICT "
-            ]
-        },
-        {
-            degree: "Diploma in ICT: Application Development",
-            institution: "Cape Peninsula University of Technology (CPUT)",
-            class: "Ongoing",
-            status: "In Progress",
-            description: "A comprehensive qualification focused on designing, developing, and maintaining software applications, with strong emphasis on backend systems, database design, and bridging academic knowledge with industry practice.",
-            modules: [
-                "Software Development",
-                "Database Design & Management",
-                "Systems Analysis & Design (UML)",
-                "Project Management",
-                "Testing & Quality Assurance",
-                "Professional Communication"
-            ]
-        },
-        {
-            degree: "Advanced Diploma in ICT: Application Development",
-            institution: "Cape Peninsula University of Technology (CPUT)",
-            class: "Upcoming",
-            status: "Pending",
-            description: "An advanced qualification designed to deepen expertise in software engineering, enterprise systems, and applied research, preparing graduates for leadership roles in ICT projects and bridging academic knowledge with industry innovation.",
-            modules: [
-                "Advanced Software Engineering",
-                "Database Optimization & Big Data",
-                "Systems Integration",
-                "Research Methods in ICT",
-                "Project Leadership & Management",
-                "Emerging Technologies"
-            ]
-        }
-    ];
     const sliderRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     // Auto-focus on the 'In Progress' qualification on load
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])({
@@ -1702,7 +1701,7 @@ function AcademicBackground() {
                 className: "section-divider reveal"
             }, void 0, false, {
                 fileName: "[project]/src/components/academic.jsx",
-                lineNumber: 117,
+                lineNumber: 116,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1716,7 +1715,7 @@ function AcademicBackground() {
                                 children: "Academic Foundation"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 120,
+                                lineNumber: 119,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1724,13 +1723,13 @@ function AcademicBackground() {
                                 children: "A learning journey shaped by dedication and progress."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 121,
+                                lineNumber: 120,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/academic.jsx",
-                        lineNumber: 119,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1753,12 +1752,12 @@ function AcademicBackground() {
                                                                 children: item.status
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/academic.jsx",
-                                                                lineNumber: 139,
+                                                                lineNumber: 138,
                                                                 columnNumber: 19
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 138,
+                                                            lineNumber: 137,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1766,7 +1765,7 @@ function AcademicBackground() {
                                                             children: item.degree
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 141,
+                                                            lineNumber: 140,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1778,7 +1777,7 @@ function AcademicBackground() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 142,
+                                                            lineNumber: 141,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1786,13 +1785,13 @@ function AcademicBackground() {
                                                             children: item.description
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 143,
+                                                            lineNumber: 142,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/academic.jsx",
-                                                    lineNumber: 137,
+                                                    lineNumber: 136,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1803,7 +1802,7 @@ function AcademicBackground() {
                                                             children: "CORE MODULES"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 147,
+                                                            lineNumber: 146,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1815,41 +1814,41 @@ function AcademicBackground() {
                                                                             className: "bullet"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/academic.jsx",
-                                                                            lineNumber: 151,
+                                                                            lineNumber: 150,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         mod
                                                                     ]
                                                                 }, mi, true, {
                                                                     fileName: "[project]/src/components/academic.jsx",
-                                                                    lineNumber: 150,
+                                                                    lineNumber: 149,
                                                                     columnNumber: 25
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/academic.jsx",
-                                                            lineNumber: 148,
+                                                            lineNumber: 147,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/academic.jsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 145,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/academic.jsx",
-                                            lineNumber: 136,
+                                            lineNumber: 135,
                                             columnNumber: 17
                                         }, this)
                                     }, index, false, {
                                         fileName: "[project]/src/components/academic.jsx",
-                                        lineNumber: 132,
+                                        lineNumber: 131,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 127,
+                                lineNumber: 126,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1866,17 +1865,17 @@ function AcademicBackground() {
                                         points: "15 18 9 12 15 6"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/academic.jsx",
-                                        lineNumber: 164,
+                                        lineNumber: 163,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/academic.jsx",
-                                    lineNumber: 163,
+                                    lineNumber: 162,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 162,
+                                lineNumber: 161,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1893,39 +1892,39 @@ function AcademicBackground() {
                                         points: "9 18 15 12 9 6"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/academic.jsx",
-                                        lineNumber: 169,
+                                        lineNumber: 168,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/academic.jsx",
-                                    lineNumber: 168,
+                                    lineNumber: 167,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/academic.jsx",
-                                lineNumber: 167,
+                                lineNumber: 166,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/academic.jsx",
-                        lineNumber: 126,
+                        lineNumber: 125,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/academic.jsx",
-                lineNumber: 118,
+                lineNumber: 117,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/academic.jsx",
-        lineNumber: 116,
+        lineNumber: 115,
         columnNumber: 5
     }, this);
 }
-_s(AcademicBackground, "fSEIdTJTG26yvGqlfC4fCuJupKg=");
+_s(AcademicBackground, "/AfWq6YlkJaE51VWmj0XAFims9M=");
 _c = AcademicBackground;
 var _c;
 __turbopack_context__.k.register(_c, "AcademicBackground");
