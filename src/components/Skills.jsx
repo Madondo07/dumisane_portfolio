@@ -22,14 +22,14 @@ function Icon({ name }) {
   );
 }
 
-export default function Skills() {
-  const groups = [
-    { title: "Frontend", icon: "frontend", items: ["HTML/CSS", "JavaScript", "React", "Tailwind CSS", "Responsive Design", "Performance Optimization"] },
-    { title: "Backend", icon: "backend", items: ["Java", "Python", "PHP", "REST APIs", "JWT Authentication", "Workflow Troubleshooting"] },
-    { title: "Database", icon: "database", items: ["MySQL", "SQLite (Python)", "Supabase", "Schema Design", "Query Optimization", "Firebase"] },
-    { title: "Tools", icon: "tools", items: ["Git/GitHub", "VS Code", "Postman", "Vercel", "DevTools", "Figma", "Netlify"] },
-  ];
+const groups = [
+  { title: "Frontend", icon: "frontend", items: ["HTML/CSS", "JavaScript", "React", "Tailwind CSS", "Responsive Design", "Performance Optimization"] },
+  { title: "Backend", icon: "backend", items: ["Java", "Python", "PHP", "REST APIs", "JWT Authentication", "Workflow Troubleshooting"] },
+  { title: "Database", icon: "database", items: ["MySQL", "SQLite (Python)", "Supabase", "Schema Design", "Query Optimization", "Firebase"] },
+  { title: "Tools", icon: "tools", items: ["Git/GitHub", "VS Code", "Postman", "Vercel", "DevTools", "Figma", "Netlify"] },
+];
 
+export default function Skills() {
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
