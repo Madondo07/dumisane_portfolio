@@ -1,7 +1,7 @@
 var R=require("../chunks/ssr/[turbopack]_runtime.js")("server/pages/_error.js")
 R.c("server/chunks/ssr/node_modules_0b53a5be._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__989838ed._.js")
-R.c("server/chunks/ssr/src_components_b0fc5144._.js")
+R.c("server/chunks/ssr/src_components_Navbar_jsx_558940c0._.js")
 R.c("server/chunks/ssr/_83a32ae5._.js")
 R.c("server/chunks/ssr/node_modules_next_024728f0._.js")
 R.c("server/chunks/ssr/[externals]_next_dist_shared_lib_no-fallback-error_external_59b92b38.js")

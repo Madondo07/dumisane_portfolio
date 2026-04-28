@@ -5,15 +5,13 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Dumisane Madondo | Software Developer Portfolio</title>
-          <meta
-            name="description"
-            content="Dumisane Madondo's portfolio showcasing full-stack development projects, skills, and experiences."
-          />
-          <link rel="icon" href="/logoicon2.svg" type="image/svg+xml" />
-          <link rel="shortcut icon" href="/logoicon2.svg" type="image/svg+xml" />
-          <link rel="apple-touch-icon" href="/logoicon2.svg" />
-          <meta name="theme-color" content="#0f1724" />
+          {/* Global tags only — title & description belong in each page file */}
+          <meta name="author" content="Dumisane Madondo" />
+          <meta name="robots" content="index, follow" />
+          <meta name="theme-color" content="#0f0f0f" />
+          <link rel="icon" href="/logoicon2.png" type="image/png" />
+          <link rel="shortcut icon" href="/logoicon2.png" type="image/png" />
+          <link rel="apple-touch-icon" href="/logoicon2.png" />
         </Head>
         <body>
           <Main />
