@@ -26,24 +26,23 @@
 
 .academic-slider {
   display: flex;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  width: 100%;
-  gap: 1rem; /* Gap between slides */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.academic-slider::-webkit-scrollbar {
+  display: none;
 }
 
 .academic-slide {
-  flex: 0 0 85%; /* Shows 7.5% of previous and next cards */
-  width: 85%;
-  padding: 0;
+  flex: 0 0 100%;
+  max-width: 950px;
+  scroll-snap-align: center;
   box-sizing: border-box;
-  opacity: 0.4;
-  transform: scale(0.9);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.academic-slide.active {
-  opacity: 1;
-  transform: scale(1.02); /* Slightly bigger to show focus */
 }
 
 .academic-card {
@@ -68,12 +67,12 @@ html.dark .academic-card {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.academic-slide.active .academic-card:hover {
+.academic-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-html.dark .academic-slide.active .academic-card:hover {
+html.dark .academic-card:hover {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
@@ -113,34 +112,12 @@ html.dark .academic-slide.active .academic-card:hover {
   }
 }
 
-.slider-nav svg {
-  width: 20px;
-  height: 20px;
-}
-
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-top: 1.5rem;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: all 0.3s ease;
-}
-
-html.dark .dot { background: rgba(255, 255, 255, 0.1); }
-
-.dot.active {
-  background: var(--accent);
-  transform: scale(1.2);
+.nav-arrow-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
 }
 
 .card-left {
