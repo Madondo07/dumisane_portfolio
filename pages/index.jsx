@@ -11,6 +11,17 @@ export default function Home() {
       <Head>
         <title>Dumisane Madondo | Full-Stack Developer</title>
         <meta name="description" content="Full-stack developer specializing in React, Next.js & Java. Explore my projects, skills, and academic background." />
+        {/* Open Graph — used by WhatsApp, Telegram, Facebook, LinkedIn */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.dumisanemm.co.za/" />
+        <meta property="og:title" content="Dumisane Madondo | Full-Stack Developer" />
+        <meta property="og:description" content="Full-stack developer specializing in React, Next.js & Java. Explore my projects, skills, and academic background." />
+        <meta property="og:image" content="https://www.dumisanemm.co.za/logoicon2.png" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dumisane Madondo | Full-Stack Developer" />
+        <meta name="twitter:description" content="Full-stack developer specializing in React, Next.js & Java. Explore my projects, skills, and academic background." />
+        <meta name="twitter:image" content="https://www.dumisanemm.co.za/logoicon2.png" />
       </Head>
       <Hero />
       <Skills />
