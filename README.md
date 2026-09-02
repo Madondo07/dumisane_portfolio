@@ -1,31 +1,70 @@
-Dumisane's Portfolio
-A modern, fully-responsive portfolio website showcasing full-stack development expertise, featuring smooth animations, dark mode support, and comprehensive project case studies demonstrating real-world problem-solving.
+# Dumisane's Portfolio
 
-Features
-Hero Section with animated role typing (Full Stack Developer, Backend Developer, Database Administrator)
-Skills Showcase - Technologies and tools proficiency with visual statistics
-Projects Portfolio - Detailed case studies of 5+ real-world projects including:
-Modern RSVP Platform (Next.js, Supabase)
-SafeRide E-hailing System (React, Real-time APIs)
-Enrollment Management System (Java, Swing)
-CPUT Clinic Booking (Full-stack PHP/MySQL)
-Sudoku Validator & Solver
-Dark Mode Toggle for comfortable browsing
-Smooth Animations using Framer Motion
-Contact Form with validation using React Hook Form
-Responsive Design - Mobile, tablet, and desktop optimized
+A modern, fully-responsive portfolio website showcasing full-stack development expertise with smooth animations, dark mode support, and comprehensive project case studies.
 
-Tech Stack
-Frontend: Next.js 15, React 19, Tailwind CSS
-Animations: Framer Motion
-Forms: React Hook Form, Yup
-Icons: Iconify React
-HTTP Client: Axios
-Build Tools: ESLint, PostCSS
-Deployment: Vercel
+## ✨ Features
 
-Getting Started
+- **Hero Section** - Animated role typing effect (Full Stack Developer, Backend Developer, Database Administrator)
+- **Skills Showcase** - Technologies and tools proficiency with visual statistics
+- **Projects Portfolio** - Detailed case studies of 5+ real-world projects
+- **Dark Mode Toggle** - Comfortable browsing in any lighting
+- **Smooth Animations** - Built with Framer Motion
+- **Contact Form** - Validation using React Hook Form
+- **Responsive Design** - Optimized for mobile, tablet, and desktop
+
+## 📦 Projects
+
+- **Modern RSVP Platform** - Next.js, Supabase
+- **SafeRide E-hailing System** - React, Real-time APIs
+- **Enrollment Management System** - Java, Swing
+- **CPUT Clinic Booking** - Full-stack PHP/MySQL
+- **Sudoku Validator & Solver** - Algorithm implementation
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+- Next.js 15
+- React 19
+- Tailwind CSS
+
+**Libraries & Tools:**
+- Framer Motion (animations)
+- React Hook Form & Yup (forms & validation)
+- Iconify React (icons)
+- Axios (HTTP client)
+- ESLint & PostCSS (build tools)
+
+**Deployment:**
+- Vercel
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Install dependencies
 npm install
-npm run dev      # Start dev server on port 9002
-npm run build    # Build for production
-npm start        # Start production server
+
+# Start development server (runs on port 9002)
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 💬 Contact
+
+Feel free to reach out through the contact form on the portfolio or connect with me on social media.
+
+---
