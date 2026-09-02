@@ -6,19 +6,19 @@
   "rootMainFiles": [],
   "pages": {
     "/_app": [
-      "static/chunks/src_components_Navbar_jsx_b6001e29._.js",
-      "static/chunks/node_modules_next_dist_compiled_next-devtools_index_5277ebc8.js",
-      "static/chunks/node_modules_next_dist_compiled_166120c5._.js",
-      "static/chunks/node_modules_next_dist_shared_lib_7b8ea5a1._.js",
-      "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
-      "static/chunks/node_modules_next_dist_2e2215b7._.js",
-      "static/chunks/node_modules_next_5ba47e86._.js",
-      "static/chunks/node_modules_react-dom_4411d9bd._.js",
-      "static/chunks/node_modules_db346ff0._.js",
-      "static/chunks/[root-of-the-server]__d8c812be._.js",
-      "static/chunks/src_0d0dfa15._.css",
-      "static/chunks/pages__app_2da965e7._.js",
-      "static/chunks/turbopack-pages__app_314b4d22._.js"
+      "static/chunks/dumisane_portfolio_src_components_Navbar_jsx_60b45f00._.js",
+      "static/chunks/ab74b_next_dist_compiled_next-devtools_index_e424b71c.js",
+      "static/chunks/ab74b_next_dist_compiled_8e0088f8._.js",
+      "static/chunks/ab74b_next_dist_shared_lib_c66f52ec._.js",
+      "static/chunks/ab74b_next_dist_client_3b0497ae._.js",
+      "static/chunks/ab74b_next_dist_ff07f0a0._.js",
+      "static/chunks/ab74b_next_d319a18c._.js",
+      "static/chunks/ab74b_react-dom_4da6d16c._.js",
+      "static/chunks/ab74b_b9bb55b7._.js",
+      "static/chunks/[root-of-the-server]__f5263c2f._.js",
+      "static/chunks/dumisane_portfolio_src_3ea71203._.css",
+      "static/chunks/dumisane_portfolio_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-dumisane_portfolio_pages__app_2fb3888c._.js"
     ]
   },
   "ampFirstPages": []

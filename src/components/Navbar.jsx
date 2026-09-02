@@ -19,6 +19,7 @@ function Navbar() {
     { label: "Skills", id: "skills" },
     { label: "Academic", id: "academic" },
     { label: "Projects", id: "projects" },
+    {label: "Certificates", id: "certificates" },
     { label: "Contact", id: "contact", isLink: true },
   ];
 

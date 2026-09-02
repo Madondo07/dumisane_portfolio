@@ -1,0 +1,404 @@
+/* ── Section wrapper ─────────────────────────────────────────────────────── */
+.certs-section {
+  padding: 2rem 1rem 5rem;
+  background: var(--muted);
+  margin-bottom: 3rem;
+  scroll-margin-top: 96px;
+}
+
+html.dark .certs-section {
+  background: linear-gradient(to bottom, var(--hero-start), var(--hero-end));
+}
+
+.certs-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ── Section header ──────────────────────────────────────────────────────── */
+.certs-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.certs-subtitle {
+  font-size: 1rem;
+  color: var(--text);
+  opacity: 0.6;
+  margin: 0.5rem 0 2.5rem;
+}
+
+/* ── Accordion container ─────────────────────────────────────────────────── */
+.certs-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+/* ── Single accordion group ──────────────────────────────────────────────── */
+.certs-group {
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+html.dark .certs-group {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.certs-group--open {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+html.dark .certs-group--open {
+  box-shadow: 0 0 0 1px var(--accent), 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Group header button ─────────────────────────────────────────────────── */
+.certs-group-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text);
+  transition: background 0.2s ease;
+}
+
+.certs-group-header:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: transparent;
+}
+
+html.dark .certs-group-header:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Icon circle */
+.certs-group-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(75, 75, 255, 0.1);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+html.dark .certs-group-icon {
+  background: rgba(154, 163, 255, 0.12);
+}
+
+/* Title + count stack */
+.certs-group-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.certs-group-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.certs-group-count {
+  font-size: 0.78rem;
+  color: var(--text);
+  opacity: 0.55;
+  margin-top: 1px;
+}
+
+/* Count badge */
+.certs-group-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: rgba(75, 75, 255, 0.12);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  padding: 0 6px;
+  flex-shrink: 0;
+}
+
+html.dark .certs-group-badge {
+  background: rgba(154, 163, 255, 0.14);
+}
+
+/* Chevron */
+.certs-group-chevron {
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+/* ── Course list (expanded) ───────────────────────────────────────────────── */
+.certs-course-list {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 0.75rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+html.dark .certs-course-list {
+  border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+.certs-course-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: background 0.2s ease;
+}
+
+.certs-course-row:hover {
+  background: rgba(75, 75, 255, 0.04);
+}
+
+html.dark .certs-course-row {
+  background: rgba(255, 255, 255, 0.025);
+  border-color: rgba(255, 255, 255, 0.04);
+}
+
+html.dark .certs-course-row:hover {
+  background: rgba(154, 163, 255, 0.06);
+}
+
+.certs-course-name {
+  font-size: 0.84rem;
+  color: var(--text);
+  opacity: 0.88;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  line-height: 1.4;
+}
+
+/* ── View button ─────────────────────────────────────────────────────────── */
+.certs-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(75, 75, 255, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(75, 75, 255, 0.2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.certs-view-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+html.dark .certs-view-btn {
+  background: rgba(154, 163, 255, 0.12);
+  border-color: rgba(154, 163, 255, 0.22);
+}
+
+html.dark .certs-view-btn:hover {
+  background: var(--accent);
+  color: #0f1724;
+  border-color: transparent;
+}
+
+/* ── Entry animations ────────────────────────────────────────────────────── */
+.certs-section .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.certs-visible .reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.certs-visible .certs-accordion.reveal {
+  transition-delay: 0.1s;
+}
+
+/* ── Modal overlay ───────────────────────────────────────────────────────── */
+.cert-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  animation: overlayIn 0.2s ease;
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Modal box ───────────────────────────────────────────────────────────── */
+.cert-modal {
+  background: var(--surface);
+  border: 1px solid rgba(75, 75, 255, 0.25);
+  border-radius: 18px;
+  padding: 0;
+  max-width: 900px;
+  width: 100%;
+  /* Fixed height so flex children can fill it — header + iframe share the space */
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  animation: modalIn 0.25s ease;
+}
+
+html.dark .cert-modal {
+  background: #11121b;
+  border-color: rgba(154, 163, 255, 0.2);
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.96) translateY(10px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+
+/* ── Modal header ────────────────────────────────────────────────────────── */
+.cert-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;           /* never compress — iframe gets the rest */
+}
+
+html.dark .cert-modal-header {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Certificate name */
+.cert-modal-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  opacity: 0.85;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  margin: 0;
+  line-height: 1.4;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Close button */
+.cert-modal-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.cert-modal-close:hover {
+  background: rgba(75, 75, 255, 0.12);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: rotate(90deg);
+}
+
+html.dark .cert-modal-close {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ── PDF iframe wrapper ──────────────────────────────────────────────────── */
+.cert-pdf-wrapper {
+  position: relative;
+  flex: 1;        /* takes all height left after the header */
+  min-height: 0;  /* required for flex children to shrink properly */
+  overflow: hidden;
+}
+
+/* iframe fills the wrapper exactly */
+.cert-modal-pdf {
+  display: block;
+  width: 100%;
+  height: 100%;   /* fills cert-pdf-wrapper which itself flexes to fill the modal */
+  border: none;
+  border-radius: 0 0 18px 18px;
+  background: #fff;
+}
+
+/* Transparent guard — blocks right-click "Save as" */
+.cert-pdf-guard {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .certs-group-title  { font-size: 0.85rem; }
+  .certs-course-name  { font-size: 0.78rem; }
+  .cert-modal         { height: 95vh; border-radius: 14px; }
+  .cert-modal-overlay { padding: 0.5rem; }
+  .certs-group-header { padding: 0.9rem 1rem; gap: 0.65rem; }
+}
+

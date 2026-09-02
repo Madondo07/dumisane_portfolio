@@ -1,9 +1,9 @@
 {
-  "[project]/src/components/Navbar.jsx [client] (ecmascript, next/dynamic entry)": {
-    "id": "[project]/src/components/Navbar.jsx [client] (ecmascript, next/dynamic entry)",
+  "[project]/dumisane_portfolio/src/components/Navbar.jsx [client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/dumisane_portfolio/src/components/Navbar.jsx [client] (ecmascript, next/dynamic entry)",
     "files": [
-      "static/chunks/_94a240a0._.js",
-      "static/chunks/src_components_Navbar_jsx_d226658d._.js"
+      "static/chunks/dumisane_portfolio_f97d7e36._.js",
+      "static/chunks/dumisane_portfolio_src_components_Navbar_jsx_278ca672._.js"
     ]
   }
 }

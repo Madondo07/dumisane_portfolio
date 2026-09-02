@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
-import fallback from '../assets/intro.png';
+import fallback from '../assets/hero2.png';
 
 export default function Hero() {
   // hero image, otherwise fallback bundled asset
