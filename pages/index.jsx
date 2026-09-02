@@ -4,6 +4,7 @@ import Skills from '../src/components/Skills';
 import SkillsStats from '../src/components/SkillsStats';
 import AcademicBackground from '../src/components/academic';
 import Projects from '../src/components/Projects';
+import Certificates from '../src/components/Certificates';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <AcademicBackground />
       <SkillsStats />
       <Projects />
+      <Certificates />
     </>
   );
 }
