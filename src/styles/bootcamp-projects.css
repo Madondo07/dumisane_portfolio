@@ -1,22 +1,30 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   Applied Projects Section
-   Mirrors the Bootcamp Projects card slider design (colour-coded tech tags,
-   single-slide-per-project layout) — reuses the shared --bp-* category colours.
+   Bootcamp Projects Section
+   Mirrors the academic-card slider design with colour-coded tech tags
    ═══════════════════════════════════════════════════════════════════════════ */
 
+/* ── Category Colours ─────────────────────────────────────────────────────── */
+:root {
+  --bp-frontend: #3b82f6; /* Blue   */
+  --bp-backend:  #10b981; /* Emerald */
+  --bp-database: #f59e0b; /* Amber   */
+  --bp-tools:    #8b5cf6; /* Violet  */
+  --bp-ai:       #f43f5e; /* Rose    */
+}
+
 /* ── Section ──────────────────────────────────────────────────────────────── */
-.ap-section {
+.bp-section {
   padding: 2rem 1rem 4rem;
   background: var(--bg);
   scroll-margin-top: 96px;
 }
 
-.ap-container {
+.bp-container {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.ap-subtitle {
+.bp-subtitle {
   font-size: 1.1rem;
   color: var(--text);
   opacity: 0.7;
@@ -25,7 +33,7 @@
 }
 
 /* ── Slider Wrapper ───────────────────────────────────────────────────────── */
-.ap-slider-wrapper {
+.bp-slider-wrapper {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -37,7 +45,7 @@
    never shifts the header/subtitle/card spacing. pointer-events: none keeps
    it purely informational so it can never intercept a drag/scroll gesture
    meant for the card underneath. */
-.ap-counter {
+.bp-counter {
   position: absolute;
   top: 0.5rem;
   right: 1.25rem;
@@ -58,29 +66,29 @@
   letter-spacing: 0.02em;
 }
 
-html.dark .ap-counter {
+html.dark .bp-counter {
   background: rgba(0, 170, 255, 0.12);
   border-color: rgba(0, 170, 255, 0.25);
 }
 
-.ap-counter-sep {
+.bp-counter-sep {
   opacity: 0.4;
 }
 
-.ap-counter-total {
+.bp-counter-total {
   opacity: 0.55;
   font-weight: 600;
 }
 
 @media (max-width: 480px) {
-  .ap-counter {
+  .bp-counter {
     font-size: 0.75rem;
     padding: 0.3rem 0.6rem;
     right: 0.75rem;
   }
 }
 
-.ap-slider {
+.bp-slider {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -89,9 +97,9 @@ html.dark .ap-counter {
   gap: 1.5rem;
   padding: 0 1rem;
 }
-.ap-slider::-webkit-scrollbar { display: none; }
+.bp-slider::-webkit-scrollbar { display: none; }
 
-.ap-slide {
+.bp-slide {
   flex: 0 0 100%;
   max-width: 950px;
   scroll-snap-align: center;
@@ -99,8 +107,7 @@ html.dark .ap-counter {
 }
 
 /* ── Card ─────────────────────────────────────────────────────────────────── */
-.ap-card {
-  position: relative;
+.bp-card {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   background: var(--surface);
@@ -116,60 +123,29 @@ html.dark .ap-counter {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-html.dark .ap-card {
+html.dark .bp-card {
   background: #11121b;
   border-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.ap-card:hover {
+.bp-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
-html.dark .ap-card:hover {
+html.dark .bp-card:hover {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* Featured (achievement) card — gold accent */
-.ap-card.ap-featured {
-  border-color: rgba(212, 175, 55, 0.3);
-  background: rgba(212, 175, 55, 0.02);
-}
-html.dark .ap-card.ap-featured {
-  background: rgba(212, 175, 55, 0.05);
-  border-color: rgba(212, 175, 55, 0.4);
-}
-.ap-card.ap-featured .ap-title { color: #d4af37; }
-
-.ap-achievement-badge {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  border-radius: 999px;
-  padding: 0.3rem 0.85rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
-  animation: ap-badge-glow 2.4s ease-in-out infinite;
-}
-@keyframes ap-badge-glow {
-  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-  50% { box-shadow: 0 0 12px 4px rgba(212, 175, 55, 0.55); }
-  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-}
-
 /* ── Left Column ──────────────────────────────────────────────────────────── */
-.ap-card-left {
+.bp-card-left {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
 }
 
 /* Role badge */
-.ap-role-badge {
+.bp-role-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -185,12 +161,12 @@ html.dark .ap-card.ap-featured {
   border: 1px solid rgba(0, 102, 255, 0.2);
 }
 
-html.dark .ap-role-badge {
+html.dark .bp-role-badge {
   background: rgba(0, 170, 255, 0.12);
   border-color: rgba(0, 170, 255, 0.25);
 }
 
-.ap-role-context {
+.bp-role-context {
   font-size: 0.82rem;
   color: var(--text);
   opacity: 0.55;
@@ -198,7 +174,7 @@ html.dark .ap-role-badge {
   margin: 0;
 }
 
-.ap-title {
+.bp-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text);
@@ -207,11 +183,11 @@ html.dark .ap-role-badge {
 }
 
 /* Detail blocks */
-.ap-detail-block {
+.bp-detail-block {
   margin-bottom: 0.15rem;
 }
 
-.ap-detail-label {
+.bp-detail-label {
   font-size: 0.7rem;
   font-weight: 800;
   color: var(--text);
@@ -221,7 +197,7 @@ html.dark .ap-role-badge {
   margin: 0 0 0.35rem;
 }
 
-.ap-detail-text {
+.bp-detail-text {
   font-size: 0.88rem;
   color: var(--text);
   opacity: 0.82;
@@ -230,13 +206,13 @@ html.dark .ap-role-badge {
 }
 
 /* ── Right Column ─────────────────────────────────────────────────────────── */
-.ap-card-right-wrapper {
+.bp-card-right-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.ap-card-right {
+.bp-card-right {
   flex: 1;
   background: rgba(0, 0, 0, 0.02);
   border-radius: 14px;
@@ -244,20 +220,20 @@ html.dark .ap-role-badge {
   border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-html.dark .ap-card-right {
+html.dark .bp-card-right {
   background: rgba(255, 255, 255, 0.02);
   border-color: rgba(255, 255, 255, 0.03);
 }
 
-/* ── Tech Tags (reuses the shared --bp-* category colours) ───────────────── */
-.ap-tech-tags {
+/* ── Tech Tags ────────────────────────────────────────────────────────────── */
+.bp-tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
   margin-top: 0.5rem;
 }
 
-.ap-tech-tag {
+.bp-tech-tag {
   display: inline-flex;
   padding: 0.4rem 0.85rem;
   border-radius: 99px;
@@ -275,52 +251,59 @@ html.dark .ap-card-right {
 }
 
 /* Category Colours — Light */
-.ap-tech-tag[data-category='frontend'] {
+.bp-tech-tag[data-category='frontend'] {
   background: rgba(59, 130, 246, 0.08);
   border-color: rgba(59, 130, 246, 0.2);
   color: var(--bp-frontend);
 }
-.ap-tech-tag[data-category='backend'] {
+.bp-tech-tag[data-category='backend'] {
   background: rgba(16, 185, 129, 0.08);
   border-color: rgba(16, 185, 129, 0.2);
   color: var(--bp-backend);
 }
-.ap-tech-tag[data-category='database'] {
+.bp-tech-tag[data-category='database'] {
   background: rgba(245, 158, 11, 0.08);
   border-color: rgba(245, 158, 11, 0.2);
   color: var(--bp-database);
 }
-.ap-tech-tag[data-category='tools'] {
+.bp-tech-tag[data-category='tools'] {
   background: rgba(139, 92, 246, 0.08);
   border-color: rgba(139, 92, 246, 0.2);
   color: var(--bp-tools);
 }
+.bp-tech-tag[data-category='ai'] {
+  background: rgba(244, 63, 94, 0.08);
+  border-color: rgba(244, 63, 94, 0.2);
+  color: var(--bp-ai);
+}
 
 /* Category Colours — Dark */
-html.dark .ap-tech-tag[data-category='frontend'] { background: rgba(59, 130, 246, 0.15); }
-html.dark .ap-tech-tag[data-category='backend']  { background: rgba(16, 185, 129, 0.15); }
-html.dark .ap-tech-tag[data-category='database'] { background: rgba(245, 158, 11, 0.15); }
-html.dark .ap-tech-tag[data-category='tools']    { background: rgba(139, 92, 246, 0.15); }
+html.dark .bp-tech-tag[data-category='frontend'] { background: rgba(59, 130, 246, 0.15); }
+html.dark .bp-tech-tag[data-category='backend']  { background: rgba(16, 185, 129, 0.15); }
+html.dark .bp-tech-tag[data-category='database'] { background: rgba(245, 158, 11, 0.15); }
+html.dark .bp-tech-tag[data-category='tools']    { background: rgba(139, 92, 246, 0.15); }
+html.dark .bp-tech-tag[data-category='ai']       { background: rgba(244, 63, 94, 0.15); }
 
 /* Hover fill */
-.ap-tech-tag[data-category='frontend']:hover { background: var(--bp-frontend); border-color: var(--bp-frontend); color: #fff; }
-.ap-tech-tag[data-category='backend']:hover  { background: var(--bp-backend);  border-color: var(--bp-backend);  color: #fff; }
-.ap-tech-tag[data-category='database']:hover { background: var(--bp-database); border-color: var(--bp-database); color: #fff; }
-.ap-tech-tag[data-category='tools']:hover    { background: var(--bp-tools);    border-color: var(--bp-tools);    color: #fff; }
+.bp-tech-tag[data-category='frontend']:hover { background: var(--bp-frontend); border-color: var(--bp-frontend); color: #fff; }
+.bp-tech-tag[data-category='backend']:hover  { background: var(--bp-backend);  border-color: var(--bp-backend);  color: #fff; }
+.bp-tech-tag[data-category='database']:hover { background: var(--bp-database); border-color: var(--bp-database); color: #fff; }
+.bp-tech-tag[data-category='tools']:hover    { background: var(--bp-tools);    border-color: var(--bp-tools);    color: #fff; }
+.bp-tech-tag[data-category='ai']:hover       { background: var(--bp-ai);       border-color: var(--bp-ai);       color: #fff; }
 
-.ap-tech-tag:hover {
+.bp-tech-tag:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* ── Link Icon Buttons ────────────────────────────────────────────────────── */
-.ap-links {
+.bp-links {
   display: flex;
   gap: 0.5rem;
   margin-top: auto;
 }
 
-.ap-link-icon {
+.bp-link-icon {
   flex: 1;
   display: inline-flex;
   align-items: center;
@@ -342,36 +325,36 @@ html.dark .ap-tech-tag[data-category='tools']    { background: rgba(139, 92, 246
   -webkit-backdrop-filter: blur(4px);
 }
 
-.ap-link-icon svg {
+.bp-link-icon svg {
   width: 18px;
   height: 18px;
 }
 
 /* GitHub — white text, subtle bg */
-.ap-link-github {
+.bp-link-github {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.12);
   color: #fff;
 }
-html.dark .ap-link-github {
+html.dark .bp-link-github {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.15);
   color: #fff;
 }
 /* Light mode: ensure white text is readable with a darker bg */
-html:not(.dark) .ap-link-github {
+html:not(.dark) .bp-link-github {
   background: rgba(15, 23, 36, 0.75);
   border-color: rgba(15, 23, 36, 0.3);
   color: #fff;
 }
-.ap-link-github:hover {
+.bp-link-github:hover {
   background: rgba(15, 23, 36, 0.95);
   border-color: rgba(15, 23, 36, 0.5);
   color: #fff;
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-html.dark .ap-link-github:hover {
+html.dark .bp-link-github:hover {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.3);
   color: #fff;
@@ -382,13 +365,13 @@ html.dark .ap-link-github:hover {
    pseudo-box) so the line stays a crisp N-px outline even on a wide, thin
    button — a rotated oversized box would swing its corners past the edges
    and look like a diagonal shadow instead of a border. */
-@property --ap-border-angle {
+@property --bp-border-angle {
   syntax: '<angle>';
   inherits: false;
   initial-value: 0deg;
 }
 
-.ap-link-live {
+.bp-link-live {
   position: relative;
   color: #fff;
   border: 2px solid transparent;
@@ -396,21 +379,21 @@ html.dark .ap-link-github:hover {
   background:
     linear-gradient(#1a1f36, #1a1f36) padding-box,
     conic-gradient(
-      from var(--ap-border-angle),
+      from var(--bp-border-angle),
       #0055ff,
       #0088ff,
       #00bbff,
       #0088ff,
       #0055ff
     ) border-box;
-  animation: ap-border-spin 2.5s linear infinite;
+  animation: bp-border-spin 2.5s linear infinite;
 }
 
-html.dark .ap-link-live {
+html.dark .bp-link-live {
   background:
     linear-gradient(#11121b, #11121b) padding-box,
     conic-gradient(
-      from var(--ap-border-angle),
+      from var(--bp-border-angle),
       #0066ff,
       #00aaff,
       #00ddff,
@@ -419,23 +402,23 @@ html.dark .ap-link-live {
     ) border-box;
 }
 
-@keyframes ap-border-spin {
-  to { --ap-border-angle: 360deg; }
+@keyframes bp-border-spin {
+  to { --bp-border-angle: 360deg; }
 }
 
-.ap-link-live:hover {
+.bp-link-live:hover {
   color: #fff;
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 4px 14px rgba(0, 100, 255, 0.35);
 }
 
 /* Disabled state — dimmed when no URL */
-.ap-link-disabled {
+.bp-link-disabled {
   opacity: 0.3;
   cursor: not-allowed;
   pointer-events: auto;
 }
-.ap-link-disabled:hover {
+.bp-link-disabled:hover {
   transform: none;
   box-shadow: none;
   background: inherit;
@@ -443,8 +426,8 @@ html.dark .ap-link-live {
   color: inherit;
 }
 
-/* ── Slider Nav (reuses the shared .slider-nav look) ──────────────────────── */
-.ap-slider-wrapper .slider-nav {
+/* ── Slider Nav (reuses academic .slider-nav) ─────────────────────────────── */
+.bp-slider-wrapper .slider-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -462,29 +445,21 @@ html.dark .ap-link-live {
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
-.ap-slider-wrapper .slider-nav:hover {
+.bp-slider-wrapper .slider-nav:hover {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
   transform: translateY(-50%) scale(1.1);
 }
-.ap-slider-wrapper .slider-nav.prev { left: 1rem; }
-.ap-slider-wrapper .slider-nav.next { right: 1rem; }
-
-.nav-arrow-icon {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;
-  stroke-width: 2.5;
-  fill: none;
-}
+.bp-slider-wrapper .slider-nav.prev { left: 1rem; }
+.bp-slider-wrapper .slider-nav.next { right: 1rem; }
 
 /* ── Reveal Animation ─────────────────────────────────────────────────────── */
-.ap-section .reveal {
+.bp-section .reveal {
   opacity: 0;
   transform: translateY(16px);
 }
-.ap-visible .reveal {
+.bp-visible .reveal {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -492,58 +467,53 @@ html.dark .ap-link-live {
 
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 992px) {
-  .ap-card {
+  .bp-card {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1.5rem;
   }
-  .ap-slider-wrapper {
+  .bp-slider-wrapper {
     padding: 3.25rem 0 3rem;
   }
-  .ap-slider-wrapper .slider-nav {
+  .bp-slider-wrapper .slider-nav {
     width: 40px;
     height: 40px;
   }
-  .ap-slider-wrapper .slider-nav.prev { left: 0.5rem; }
-  .ap-slider-wrapper .slider-nav.next { right: 0.5rem; }
+  .bp-slider-wrapper .slider-nav.prev { left: 0.5rem; }
+  .bp-slider-wrapper .slider-nav.next { right: 0.5rem; }
 }
 
 @media (max-width: 768px) {
-  .ap-slide {
+  .bp-slide {
     flex: 0 0 88%;
     width: 88%;
   }
-  .ap-title {
+  .bp-title {
     font-size: 1.35rem;
   }
-  .ap-slider-wrapper .slider-nav {
+  .bp-slider-wrapper .slider-nav {
     width: 36px;
     height: 36px;
   }
-  .ap-slider-wrapper .slider-nav.prev { left: 0.25rem; }
-  .ap-slider-wrapper .slider-nav.next { right: 0.25rem; }
+  .bp-slider-wrapper .slider-nav.prev { left: 0.25rem; }
+  .bp-slider-wrapper .slider-nav.next { right: 0.25rem; }
 }
 
 @media (max-width: 480px) {
-  .ap-card {
+  .bp-card {
     padding: 1.25rem;
   }
-  .ap-title {
+  .bp-title {
     font-size: 1.2rem;
   }
-  .ap-detail-text {
+  .bp-detail-text {
     font-size: 0.82rem;
   }
-  .ap-tech-tag {
+  .bp-tech-tag {
     font-size: 0.62rem;
     padding: 0.22rem 0.55rem;
   }
-  .ap-link-icon {
+  .bp-link-icon {
     height: 34px;
-  }
-  .ap-achievement-badge {
-    top: 1rem;
-    right: 1rem;
-    font-size: 0.68rem;
   }
 }

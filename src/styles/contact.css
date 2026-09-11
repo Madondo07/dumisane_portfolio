@@ -55,7 +55,7 @@
   background: var(--accent); color:#fff; border:none; border-radius: 4px;
   transition: background-color 0.3s ease;
 }
-.contact-right .submit:hover { background: #535bf2; }
+.contact-right .submit:hover { background: #0052cc; }
 
 @media (max-width: 768px) {
   .contact-page { padding: 10rem 0.75rem 6rem; }
