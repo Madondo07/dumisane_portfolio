@@ -8,6 +8,7 @@ import '../src/styles/skills-stats.css';
 import '../src/styles/contact.css';
 import '../src/styles/academic.css';
 import '../src/styles/certificates.css';
+import '../src/styles/bootcamp-projects.css';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import heroFallback from '../src/assets/intro.png';
