@@ -63,7 +63,7 @@ const bootcampProjects = [
       'Node.js/Express', 'tRPC', 'Drizzle ORM',
       'MySQL', 'TiDB', 'Manus OAuth', 'Manus AI',
     ],
-    links: { github: '', live: '' },
+    links: { github: 'https://github.com/Madondo07/pathfinder-ai', live: 'https://pathfinder-ai-ruby-nine.vercel.app/' },
   },
   {
     title: 'SentiX — Takealot InsightEngine',
@@ -81,7 +81,7 @@ const bootcampProjects = [
       'VADER', 'Hugging Face',
       'Lovable', 'Manus',
     ],
-    links: { github: '', live: '' },
+    links: { github: 'https://github.com/Madondo07/SentiX', live: '' },
   },
   {
     title: 'OmniLens AI',
@@ -94,7 +94,7 @@ const bootcampProjects = [
     impact:
       'Independently scoped and designed a full product concept end-to-end — from MVP definition through to a 5-lens, auth-enabled, analytics-integrated build spec — demonstrating solo product thinking and UX/architecture design skill outside a team structure.',
     tools: ['Lovable', 'Figma', 'PDF Export'],
-    links: { github: '', live: '' },
+    links: { github: 'https://github.com/Madondo07/omnilens', live: '' },
   },
   {
     title: 'PathFinder AI — Week 1 MVP',
