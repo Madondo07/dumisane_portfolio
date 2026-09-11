@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Image from 'next/image';
-import fallback from '../assets/intro.png';
+import fallback from '../assets/hero2.png';
 
 export default function Hero() {
   // hero image, otherwise fallback bundled asset
@@ -86,49 +86,49 @@ export default function Hero() {
       <div className="hero-frame">
         <div className="hero-inner">
           <div className="hero-media reveal" style={{ transitionDelay: '60ms' }}>
-            <Image
-              src={fallback}
-              alt="dumisane display picture"
-              className="hero-image"
-              priority
-              width={400}
-              height={400}
-            />
-          </div>
+          <Image
+            src={fallback}
+            alt="dumisane display picture"
+            className="hero-image"
+            priority
+            width={400}
+            height={400}
+          />
+        </div>
 
-          <div className="hero-content reveal" style={{ transitionDelay: '140ms' }}>
-            {!showAbout ? (
-              <>
-                <h1 className="hero-title">
-                  Hi, I'm Dumisane Madondo{' '}
-                  <span className="typewriter-container">
-                    <span className="typewriter-ghost">
-                      {'{'}Database Administrator|{'}'}
-                    </span>
-                    <span className="typewriter-text">
-                      {'{'}<span className={`role-item ${roleClasses[roleIndex]}`}>{typed}</span>{'}'}
-                    </span>
+        <div className="hero-content reveal" style={{ transitionDelay: '140ms' }}>
+          {!showAbout ? (
+            <>
+              <h1 className="hero-title">
+                Hi, I'm Dumisane Madondo{' '}
+                <span className="typewriter-container">
+                  <span className="typewriter-ghost">
+                    {'{'}Database Administrator|{'}'}
                   </span>
-                </h1>
-                <p className="hero-sub">passionate about creating scalable, user-friendly applications. Currently pursuing a Diploma in ICT Application Development at Cape Peninsula University of Technology, I combine academic knowledge with hands-on experience to design and refine systems that balance functionality with user experience. Driven by curiosity and innovation, I thrive on turning ideas into solutions that empower both users and teams.</p>
-                <div className="hero-ctas">
-                  <button className="btn" type="button" onClick={() => setShowAbout(true)}>Show More</button>
-                  <a href="/resume.pdf" download="Dumisane_Madondo_Resume.pdf" className="btn btn-outline">Download Resume</a>
-                </div>
-              </>
-            ) : (
-              <>
-                <p className="hero-sub">My name is Dumisane Madondo, and I'm a <span className={`role-item ${roleClasses[aboutRoleIndex]}`}>{roles[aboutRoleIndex].slice(0, aboutTypedLen)}</span><br className="role-br" /> driven by a passion for building efficient, scalable, and user-friendly applications.</p>
-                <p className="hero-sub">With a strong foundation in academics and hands‑on project experience, I thrive at the intersection of problem‑solving and innovation, consistently transforming complex challenges into practical solutions.</p>
-                <p className="hero-sub">Currently pursuing a Diploma in ICT: Application Development at Cape Peninsula University of Technology, I focus on mastering modern development practices and applying them to real‑world projects. From reusable APIs to seamless web workflows, I approach each challenge with curiosity, resilience, and a commitment to excellence. </p>
-                <p className="hero-sub">My journey is anchored in continuous learning and innovation, with the goal of crafting systems that empower both users and teams. I am eager to contribute to projects that push boundaries in development.</p>
-                <div className="hero-ctas">
-                  <button className="btn btn-outline" type="button" onClick={() => setShowAbout(false)}>Show Less</button>
-                  <a href="/resume.pdf" download="Dumisane_Madondo_Resume.pdf" className="btn">Download Resume</a>
-                </div>
-              </>
-            )}
-          </div>
+                  <span className="typewriter-text">
+                    {'{'}<span className={`role-item ${roleClasses[roleIndex]}`}>{typed}</span>{'}'}
+                  </span>
+                </span>
+              </h1>
+              <p className="hero-sub">passionate about creating scalable, user-friendly applications. Currently pursuing a Diploma in ICT Application Development at Cape Peninsula University of Technology, I combine academic knowledge with hands-on experience to design and refine systems that balance functionality with user experience. Driven by curiosity and innovation, I thrive on turning ideas into solutions that empower both users and teams.</p>
+              <div className="hero-ctas">
+                <button className="btn" type="button" onClick={() => setShowAbout(true)}>Show More</button>
+                <a href="/resume.pdf" download="Dumisane_Madondo_Resume.pdf" className="btn btn-outline">Download Resume</a>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="hero-sub">My name is Dumisane Madondo, and I'm a <span className={`role-item ${roleClasses[aboutRoleIndex]}`}>{roles[aboutRoleIndex].slice(0, aboutTypedLen)}</span><br className="role-br" /> driven by a passion for building efficient, scalable, and user-friendly applications.</p>
+              <p className="hero-sub">With a strong foundation in academics and hands‑on project experience, I thrive at the intersection of problem‑solving and innovation, consistently transforming complex challenges into practical solutions.</p>
+              <p className="hero-sub">Currently pursuing a Diploma in ICT: Application Development at Cape Peninsula University of Technology, I focus on mastering modern development practices and applying them to real‑world projects. From reusable APIs to seamless web workflows, I approach each challenge with curiosity, resilience, and a commitment to excellence. </p>
+              <p className="hero-sub">My journey is anchored in continuous learning and innovation, with the goal of crafting systems that empower both users and teams. I am eager to contribute to projects that push boundaries in development.</p>
+              <div className="hero-ctas">
+                <button className="btn btn-outline" type="button" onClick={() => setShowAbout(false)}>Show Less</button>
+                <a href="/resume.pdf" download="Dumisane_Madondo_Resume.pdf" className="btn">Download Resume</a>
+              </div>
+            </>
+          )}
+        </div>
 
         </div>
       </div>

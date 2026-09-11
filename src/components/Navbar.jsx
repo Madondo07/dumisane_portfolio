@@ -19,6 +19,7 @@ function Navbar() {
     { label: "Skills", id: "skills" },
     { label: "Academic", id: "academic" },
     { label: "Projects", id: "projects" },
+    {label: "Certificates", id: "certificates" },
     { label: "Contact", id: "contact", isLink: true },
   ];
 
@@ -127,16 +128,15 @@ function Navbar() {
             </div>
           </div>
         </div>
-
       </nav>
-
-      {/* Mobile Backdrop Overlay */}
+      {/* Mobile Menu Backdrop */}
       <div 
         className={`mobile-backdrop md:hidden ${isOpen ? 'show' : ''}`} 
         onClick={closeMenu}
+        aria-hidden="true"
       />
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Menu Overlay */}
       <div className={`mobile-menu md:hidden ${isOpen ? 'show' : ''}`}>
         <div className="mobile-menu-content">
           {navLinks.map((link) => (

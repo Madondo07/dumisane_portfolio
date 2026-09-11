@@ -1,90 +1,78 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 
+const education = [
+  {
+    degree: "Secondary Education",
+    institution: "Madisong Secondary School",
+    class: "Class of 2021",
+    status: "National Senior Certificate",
+    description: "Built a strong academic foundation with a focus on Mathematics, Physics, and Geography, developing analytical thinking and problem‑solving skills that continue to shape my approach to technology and system design.",
+    modules: [
+      "Mathematics",
+      "Physical Sciences",
+      "English First Additional Language",
+      "Life Sciences",
+      "Geography"
+    ]
+  },
+  {
+    degree: "Higher Certificate in Information, Communication & Technology",
+    institution: "Cape Peninsula University of Technology (CPUT)",
+    class: "Class of 2023",
+    status: "Completed Qualification",
+    description: "A foundational qualification that introduced me to the principles of Information and Communication Technology, equipping me with essential technical and problem-solving skills for both academic progression and industry readiness.",
+    modules: [
+      "Information Systems Fundamentals",
+      "Programming Basics",
+      "Database Fundamentals",
+      "Computer Literacy",
+      "Communication Skills",
+      "Mathematics for ICT "
+    ]
+  },
+  {
+    degree: "Diploma in ICT: Application Development",
+    institution: "Cape Peninsula University of Technology (CPUT)",
+    class: "Ongoing",
+    status: "In Progress",
+    description: "A comprehensive qualification focused on designing, developing, and maintaining software applications, with strong emphasis on backend systems, database design, and bridging academic knowledge with industry practice.",
+    modules: [
+      "Software Development",
+      "Database Design & Management",
+      "Systems Analysis & Design (UML)",
+      "Project Management",
+      "Testing & Quality Assurance",
+      "Professional Communication"
+    ]
+  },
+  {
+    degree: "Advanced Diploma in ICT: Application Development",
+    institution: "Cape Peninsula University of Technology (CPUT)",
+    class: "Upcoming",
+    status: "Pending",
+    description: "An advanced qualification designed to deepen expertise in software engineering, enterprise systems, and applied research, preparing graduates for leadership roles in ICT projects and bridging academic knowledge with industry innovation.",
+    modules: [
+      "Advanced Software Engineering",
+      "Database Optimization & Big Data",
+      "Systems Integration",
+      "Research Methods in ICT",
+      "Project Leadership & Management",
+      "Emerging Technologies"
+    ]
+  }
+];
+
 export default function AcademicBackground() {
   const sectionRef = useRef(null);
-  const sliderRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
-  const education = [
-    {
-      degree: "Secondary Education",
-      institution: "Madisong Secondary School",
-      class: "Class of 2021",
-      status: "National Senior Certificate",
-      description: "Built a strong academic foundation with a focus on Mathematics, Physics, and Geography, developing analytical thinking and problem‑solving skills that continue to shape my approach to technology and system design.",
-      modules: [
-        "Mathematics",
-        "Physical Sciences",
-        "English First Additional Language",
-        "Life Sciences",
-        "Geography"
-      ]
-    },
-    {
-      degree: "Higher Certificate in Information, Communication & Technology",
-      institution: "Cape Peninsula University of Technology (CPUT)",
-      class: "Class of 2023",
-      status: "Completed Qualification",
-      description: "A foundational qualification that introduced me to the principles of Information and Communication Technology, equipping me with essential technical and problem-solving skills for both academic progression and industry readiness.",
-      modules: [
-        "Information Systems Fundamentals",
-        "Programming Basics",
-        "Database Fundamentals",
-        "Computer Literacy",
-        "Communication Skills",
-        "Mathematics for ICT "
-      ]
-    },
-    {
-      degree: "Diploma in ICT: Application Development",
-      institution: "Cape Peninsula University of Technology (CPUT)",
-      class: "Ongoing",
-      status: "In Progress",
-      description: "A comprehensive qualification focused on designing, developing, and maintaining software applications, with strong emphasis on backend systems, database design, and bridging academic knowledge with industry practice.",
-      modules: [
-        "Software Development",
-        "Database Design & Management",
-        "Systems Analysis & Design (UML)",
-        "Project Management",
-        "Testing & Quality Assurance",
-        "Professional Communication"
-      ]
-    },
-    {
-      degree: "Advanced Diploma in ICT: Application Development",
-      institution: "Cape Peninsula University of Technology (CPUT)",
-      class: "Upcoming",
-      status: "Pending",
-      description: "An advanced qualification designed to deepen expertise in software engineering, enterprise systems, and applied research, preparing graduates for leadership roles in ICT projects and bridging academic knowledge with industry innovation.",
-      modules: [
-        "Advanced Software Engineering",
-        "Database Optimization & Big Data",
-        "Systems Integration",
-        "Research Methods in ICT",
-        "Project Leadership & Management",
-        "Emerging Technologies"
-      ]
-    }
-  ];
-
-  const scrollBy = (dir) => {
-    const el = sliderRef.current;
-    if (!el) return;
-    const first = el.firstElementChild;
-    const style = getComputedStyle(el);
-    const gap = parseFloat(style.columnGap || style.gap || "0") || 0;
-    const cardW = first ? first.getBoundingClientRect().width : el.clientWidth;
-    const amount = cardW + gap;
-    const target = el.scrollLeft + (dir === "left" ? -amount : amount);
-    el.scrollTo({ left: target, behavior: "smooth" });
-  };
+  const sliderRef = useRef(null);
 
   // Auto-focus on the 'In Progress' qualification on load
   useEffect(() => {
     const inProgressIndex = education.findIndex(item => item.status === "In Progress");
-    if (inProgressIndex !== -1 && sliderRef.current) {
-      // Small timeout ensures the DOM has fully laid out the flex items and gaps
+    if (inProgressIndex !== -1) {
       setTimeout(() => {
         const el = sliderRef.current;
         if (!el) return;
@@ -97,6 +85,18 @@ export default function AcademicBackground() {
       }, 100);
     }
   }, []); // Only run once on mount
+
+  const scrollBy = (direction) => {
+    const el = sliderRef.current;
+    if (!el) return;
+    const first = el.firstElementChild;
+    if (!first) return;
+    const style = getComputedStyle(el);
+    const gap = parseFloat(style.columnGap || style.gap || "0") || 0;
+    const cardW = first.getBoundingClientRect().width;
+    const amount = direction * (cardW + gap);
+    el.scrollBy({ left: amount, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -158,14 +158,16 @@ export default function AcademicBackground() {
             ))}
           </div>
 
-          <div className="projects-controls academic-controls">
-            <button className="slider-nav prev" onClick={() => scrollBy("left")} aria-label="Previous slide">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="nav-arrow-icon"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
-            <button className="slider-nav next" onClick={() => scrollBy("right")} aria-label="Next slide">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="nav-arrow-icon"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-          </div>
+          <button className="slider-nav prev" onClick={() => scrollBy(-1)} aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="nav-arrow-icon">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <button className="slider-nav next" onClick={() => scrollBy(1)} aria-label="Next slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="nav-arrow-icon">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
