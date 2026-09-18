@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Skills from './components/Skills';
 import SkillsStats from './components/SkillsStats';
 import AcademicBackground from './components/academic';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         />
       </Routes>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

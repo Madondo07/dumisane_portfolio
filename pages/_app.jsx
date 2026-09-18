@@ -14,6 +14,7 @@ import Head from 'next/head';
 import heroFallback from '../src/assets/intro.png';
 const Navbar = dynamic(() => import('../src/components/Navbar'), { ssr: false });
 import Footer from '../src/components/Footer';
+import BackToTop from '../src/components/BackToTop';
 
 export default function MyApp(props) {
   const Component = props.Component;
@@ -29,6 +30,7 @@ export default function MyApp(props) {
         <main>
           <Component {...pageProps} />
         </main>
+        <BackToTop sectionId="projects" boundaryId="certificates" />
         <Footer />
       </div>
     </>

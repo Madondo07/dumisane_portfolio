@@ -1,5 +1,5 @@
 __turbopack_load_page_chunks__("/_app", [
-  "static/chunks/dumisane_portfolio_src_components_Navbar_jsx_6910808d._.js",
+  "static/chunks/dumisane_portfolio_src_components_Navbar_jsx_093fb79b._.js",
   "static/chunks/ab74b_next_dist_compiled_next-devtools_index_e424b71c.js",
   "static/chunks/ab74b_next_dist_compiled_8e0088f8._.js",
   "static/chunks/ab74b_next_dist_shared_lib_c66f52ec._.js",
@@ -7,9 +7,9 @@ __turbopack_load_page_chunks__("/_app", [
   "static/chunks/ab74b_next_dist_ff07f0a0._.js",
   "static/chunks/ab74b_next_d319a18c._.js",
   "static/chunks/ab74b_react-dom_4da6d16c._.js",
-  "static/chunks/ab74b_b9bb55b7._.js",
-  "static/chunks/[root-of-the-server]__f5263c2f._.js",
+  "static/chunks/ab74b_4eb8907a._.js",
+  "static/chunks/[root-of-the-server]__09ab4930._.js",
   "static/chunks/dumisane_portfolio_src_035aaa5c._.css",
   "static/chunks/dumisane_portfolio_pages__app_2da965e7._.js",
-  "static/chunks/turbopack-dumisane_portfolio_pages__app_c3906aab._.js"
+  "static/chunks/turbopack-dumisane_portfolio_pages__app_e8b1ff2f._.js"
 ])

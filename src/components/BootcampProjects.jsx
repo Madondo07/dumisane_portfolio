@@ -94,7 +94,7 @@ const bootcampProjects = [
     impact:
       'Independently scoped and designed a full product concept end-to-end — from MVP definition through to a 5-lens, auth-enabled, analytics-integrated build spec — demonstrating solo product thinking and UX/architecture design skill outside a team structure.',
     tools: ['Lovable', 'Figma', 'PDF Export'],
-    links: { github: 'https://github.com/Madondo07/omnilens', live: '' },
+    links: { github: 'https://github.com/Madondo07/omnilens', live: 'https://omnilens.lovable.app/' },
   },
   {
     title: 'PathFinder AI — Week 1 MVP',
@@ -107,7 +107,7 @@ const bootcampProjects = [
     impact:
       'Delivered a working diagnostic MVP within the team\'s single-day build window, validating the prompt-based recommender approach and setting the foundation the team carried into the Week 4 advanced build.',
     tools: ['Python', 'Streamlit', 'LLM API', 'SQLite', 'JSON', 'Lovable'],
-    links: { github: '', live: '' },
+    links: { github: 'https://github.com/Madondo07/Path_Finder', live: '' },
   }
 ];
 
